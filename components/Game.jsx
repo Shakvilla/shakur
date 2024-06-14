@@ -1,4 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
+import ArrowKeys from './ArrowKeys';
+import CircularButton from './CircularButton';
 
 const Game = () => {
     const canvasRef = useRef(null);
@@ -43,6 +45,23 @@ const Game = () => {
             window.removeEventListener('keydown', handleKeyDown);
         };
     }, [direction]);
+
+    const handleDirectionChange = (newDirection) => {
+        switch (newDirection) {
+            case 'UP':
+                if (direction !== 'DOWN') setDirection('UP');
+                break;
+            case 'DOWN':
+                if (direction !== 'UP') setDirection('DOWN');
+                break;
+            case 'LEFT':
+                if (direction !== 'RIGHT') setDirection('LEFT');
+                break;
+            case 'RIGHT':
+                if (direction !== 'LEFT') setDirection('RIGHT');
+                break;
+        }
+    };
 
     const startGame = () => {
         setGameStarted(true);
@@ -96,7 +115,7 @@ const Game = () => {
         if (head.x === food.x && head.y === food.y) {
             newSnake.unshift({}); // Add a new segment to the snake
             setFood(generateRandomFood());
-            setFoodLeft(foodLeft - 1);
+            setFoodLeft(Math.max(0, foodLeft - 1)); // Ensure foodLeft does not become negative
         }
 
         setSnake(newSnake);
@@ -152,8 +171,8 @@ const Game = () => {
     }, [snake, food, gameOver]);
 
     return (
-        <div className="relative bg-[#011627D6] p-4 rounded-lg mt-8 flex">
-            <div className="bg-[#011627] border rounded-lg border-gray-700">
+        <div className="relative bg-[#011627D6] p-4 rounded-lg mt-8 md:flex-row flex flex-col gap-4  items-start">
+            <div className="bg-[#011627] border w-full rounded-lg border-gray-700 mb-4">
                 <canvas
                     ref={canvasRef}
                     width="200"
@@ -162,19 +181,23 @@ const Game = () => {
 
                 <div className="flex justify-center items-center mb-4">
                     {!gameStarted && (
-                        <button onClick={startGame} className="bg-orange-500 px-4 py-2 rounded">start-game</button>
+                        <button onClick={startGame} className="bg-[#FEA55F] px-4 py-2 rounded font-normal text-[#01080E]">start-game</button>
                     )}
                 </div>
             </div>
 
-            <div className="flex justify-between items-center mt-4">
-                <div className="text-sm">
-                    <p>// use keyboard</p>
-                    <p>// arrows to play</p>
-                </div>
-                <div className="text-sm">
-                    <p>// food left</p>
-                    <p>{Array(foodLeft).fill('•').join(' ')}</p>
+            <div className="flex-col w-full">
+                <ArrowKeys onDirectionChange={handleDirectionChange} />
+
+                <div className="flex justify-between items-center mt-4">
+                    <div className="text-sm">
+                        <p>// food left</p>
+                        <div className="flex gap-2">
+                            {Array(foodLeft).fill().map((_, index) => (
+                                <CircularButton key={index} x={0} y={0} />
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
