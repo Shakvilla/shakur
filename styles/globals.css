@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* globals.css */
+body {
+  @apply bg-gray-900 text-white;
+}
+
+button {
+  @apply bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded;
+}
+
+
+.custom-background-blur {
+  /* position: relative; */
+ 
+  transform: translate(-40%, -50%);
+  background: radial-gradient(circle at 20% 30%, #43D9AD, transparent 70%), radial-gradient(circle at 70% 70%, #4D5BCE, transparent 70%);
+  filter: blur(60px);
+}
