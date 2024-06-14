@@ -4,6 +4,7 @@ const Game = () => {
     const canvasRef = useRef(null);
     const [gameStarted, setGameStarted] = useState(false);
     const [direction, setDirection] = useState('RIGHT');
+    const [gameOver, setGameOver] = useState(false);
     const [snake, setSnake] = useState([
         { x: 10, y: 10 },
         { x: 20, y: 10 },
@@ -45,6 +46,7 @@ const Game = () => {
 
     const startGame = () => {
         setGameStarted(true);
+        setGameOver(false);
         setSnake([
             { x: 10, y: 10 },
             { x: 20, y: 10 },
@@ -74,6 +76,20 @@ const Game = () => {
                 break;
         }
 
+        // Wrap around edges
+        if (head.x < 0) head.x = canvasRef.current.width - 10;
+        if (head.x >= canvasRef.current.width) head.x = 0;
+        if (head.y < 0) head.y = canvasRef.current.height - 10;
+        if (head.y >= canvasRef.current.height) head.y = 0;
+
+        // Check if snake touches itself
+        for (let i = 0; i < newSnake.length; i++) {
+            if (newSnake[i].x === head.x && newSnake[i].y === head.y) {
+                resetGame();
+                return;
+            }
+        }
+
         newSnake.push(head);
         newSnake.shift();
 
@@ -86,9 +102,22 @@ const Game = () => {
         setSnake(newSnake);
     };
 
+    const resetGame = () => {
+        setGameStarted(false);
+        setGameOver(true);
+        setSnake([
+            { x: 10, y: 10 },
+            { x: 20, y: 10 },
+            { x: 30, y: 10 }
+        ]);
+        setDirection('RIGHT');
+        setFoodLeft(5);
+        setFood(generateRandomFood());
+    };
+
     const generateRandomFood = () => {
-        const x = Math.floor(Math.random() * 50) * 10;
-        const y = Math.floor(Math.random() * 50) * 10;
+        const x = Math.floor(Math.random() * (canvasRef.current.width / 10)) * 10;
+        const y = Math.floor(Math.random() * (canvasRef.current.height / 10)) * 10;
         return { x, y };
     };
 
@@ -98,35 +127,46 @@ const Game = () => {
             const context = canvas.getContext('2d');
             context.clearRect(0, 0, canvas.width, canvas.height);
 
-            context.fillStyle = 'lime';
-            snake.forEach(segment => {
-                context.fillRect(segment.x, segment.y, 10, 10);
-            });
+            // Draw the snake with gradient
+            if (snake.length > 0) {
+                for (let i = 0; i < snake.length; i++) {
+                    const opacity = 1 - (i / snake.length);
+                    context.fillStyle = `rgba(67, 217, 173, ${opacity})`;
+                    context.fillRect(snake[i].x, snake[i].y, 10, 10);
+                }
+            }
 
-            context.fillStyle = 'red';
-            context.fillRect(food.x, food.y, 10, 10);
+            // Draw the food as a circle
+            context.fillStyle = '#FF6347';
+            context.beginPath();
+            context.arc(food.x + 5, food.y + 5, 5, 0, Math.PI * 2);
+            context.fill();
+
+            if (gameOver) {
+                context.fillStyle = 'white';
+                context.font = '20px Arial';
+                context.textAlign = 'center';
+                context.fillText('Game Over!', canvas.width / 2, canvas.height / 2);
+            }
         }
-    }, [snake, food]);
+    }, [snake, food, gameOver]);
 
     return (
-        <div className="relative  bg-gray-800 p-4 rounded-lg mt-8 flex">
-          
-            <div className="bg-[#011627] border rounded-lg border-gray-700 "> 
+        <div className="relative bg-[#011627D6] p-4 rounded-lg mt-8 flex">
+            <div className="bg-[#011627] border rounded-lg border-gray-700">
                 <canvas
                     ref={canvasRef}
                     width="200"
                     height="350"
-                >
-
-                </canvas>
+                ></canvas>
 
                 <div className="flex justify-center items-center mb-4">
                     {!gameStarted && (
                         <button onClick={startGame} className="bg-orange-500 px-4 py-2 rounded">start-game</button>
                     )}
                 </div>
-          </div>
-          
+            </div>
+
             <div className="flex justify-between items-center mt-4">
                 <div className="text-sm">
                     <p>// use keyboard</p>

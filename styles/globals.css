@@ -20,3 +20,10 @@ button {
   background: radial-gradient(circle at 20% 30%, #43D9AD, transparent 70%), radial-gradient(circle at 70% 70%, #4D5BCE, transparent 70%);
   filter: blur(60px);
 }
+
+.glassmorphic {
+  background: rgba(255, 255, 255, 0.261);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.348);
+}
