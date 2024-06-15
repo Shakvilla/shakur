@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import ArrowKeys from './ArrowKeys';
 import CircularButton from './CircularButton';
+import { useRouter } from 'next/navigation';
 
 const Game = () => {
     const canvasRef = useRef(null);
@@ -13,8 +14,9 @@ const Game = () => {
         { x: 30, y: 10 }
     ]);
     const [food, setFood] = useState({ x: 50, y: 50 });
-    const [foodLeft, setFoodLeft] = useState(5);
+    const [foodLeft, setFoodLeft] = useState(10);
 
+    const router = useRouter()
     useEffect(() => {
         if (gameStarted) {
             const interval = setInterval(moveSnake, 100);
@@ -46,6 +48,9 @@ const Game = () => {
         };
     }, [direction]);
 
+    const handleSkip = () => {
+        router.push('/about_me')
+    }
     const handleDirectionChange = (newDirection) => {
         switch (newDirection) {
             case 'UP':
@@ -171,7 +176,7 @@ const Game = () => {
     }, [snake, food, gameOver]);
 
     return (
-        <div className="relative bg-[#011627D6] p-4 rounded-lg mt-8 md:flex-row flex flex-col gap-4  items-start">
+        <div className="relative bg-[#011627D6] p-4 rounded-lg mt-8 lg:flex-row h-full flex flex-col gap-4 lg:items-start items-center ">
             <div className="bg-[#011627] border w-full rounded-lg border-gray-700 mb-4">
                 <canvas
                     ref={canvasRef}
@@ -186,18 +191,24 @@ const Game = () => {
                 </div>
             </div>
 
-            <div className="flex-col w-full">
-                <ArrowKeys onDirectionChange={handleDirectionChange} />
+            <div className="relative lg:h-[403px] gap-4 flex-col w-full flex justify-evenly">
+                <div className="h-full">
+                    <ArrowKeys onDirectionChange={handleDirectionChange} />
+                </div>
 
-                <div className="flex justify-between items-center mt-4">
+                <div className="flex flex-col justify-start items-center  h-full">
                     <div className="text-sm">
                         <p>// food left</p>
-                        <div className="flex gap-2">
+                        <div className="grid grid-cols-5 gap-2">
                             {Array(foodLeft).fill().map((_, index) => (
                                 <CircularButton key={index} x={0} y={0} />
                             ))}
                         </div>
                     </div>
+                </div>
+
+                <div className="flex justify-end items-end bottom-0 right-0 mb-4 mr-4">
+                    <button onClick={handleSkip} className="bg-transparent px-4 py-2 rounded border border-white font-normal text-white text-sm">skip</button>
                 </div>
             </div>
         </div>
