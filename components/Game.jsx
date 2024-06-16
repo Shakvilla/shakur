@@ -8,6 +8,8 @@ const Game = () => {
     const [gameStarted, setGameStarted] = useState(false);
     const [direction, setDirection] = useState('RIGHT');
     const [gameOver, setGameOver] = useState(false);
+    const [wellDone, setWellDone] = useState(false); // New state for "Well Done" message
+
     const [snake, setSnake] = useState([
         { x: 10, y: 10 },
         { x: 20, y: 10 },
@@ -17,12 +19,15 @@ const Game = () => {
     const [foodLeft, setFoodLeft] = useState(10);
 
     const router = useRouter()
+    let gameInterval = useRef(null); // Using useRef to store the interval ID
+
     useEffect(() => {
-        if (gameStarted) {
-            const interval = setInterval(moveSnake, 100);
-            return () => clearInterval(interval);
+        if (gameStarted && !wellDone) {
+            gameInterval.current = setInterval(moveSnake, 100);
+            return () => clearInterval(gameInterval.current);
         }
-    }, [gameStarted, snake, direction]);
+    }, [gameStarted, snake, direction, wellDone]);
+
 
     useEffect(() => {
         const handleKeyDown = (event) => {
@@ -71,13 +76,15 @@ const Game = () => {
     const startGame = () => {
         setGameStarted(true);
         setGameOver(false);
+        setWellDone(false); // Reset "Well Done" message
+
         setSnake([
             { x: 10, y: 10 },
             { x: 20, y: 10 },
             { x: 30, y: 10 }
         ]);
         setDirection('RIGHT');
-        setFoodLeft(5);
+        setFoodLeft(10);
         setFood(generateRandomFood());
     };
 
@@ -121,9 +128,14 @@ const Game = () => {
             newSnake.unshift({}); // Add a new segment to the snake
             setFood(generateRandomFood());
             setFoodLeft(Math.max(0, foodLeft - 1)); // Ensure foodLeft does not become negative
+            if (foodLeft - 1 === 0) {
+                setWellDone(true); // Display "Well Done" message
+                clearInterval(gameInterval.current); // Stop the game
+            }
         }
 
         setSnake(newSnake);
+
     };
 
     const resetGame = () => {
@@ -135,7 +147,7 @@ const Game = () => {
             { x: 30, y: 10 }
         ]);
         setDirection('RIGHT');
-        setFoodLeft(5);
+        setFoodLeft(10);
         setFood(generateRandomFood());
     };
 
@@ -172,8 +184,17 @@ const Game = () => {
                 context.textAlign = 'center';
                 context.fillText('Game Over!', canvas.width / 2, canvas.height / 2);
             }
+            if (wellDone) {
+                context.fillStyle = 'lime';
+                context.font = '20px Arial';
+                context.textAlign = 'center';
+                context.fillText('Well Done!', canvas.width / 2, canvas.height / 2);
+                resetGame()
+                return;
+                // startGame()
+            }
         }
-    }, [snake, food, gameOver]);
+    }, [snake, food, gameOver, wellDone]);
 
     return (
         <div className="relative bg-[#011627D6] p-4 rounded-lg mt-8 lg:flex-row h-full flex flex-col gap-4 lg:items-start items-center ">
