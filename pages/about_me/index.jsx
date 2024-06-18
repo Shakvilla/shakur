@@ -76,12 +76,15 @@ initialize();
               </div>
         </section>
 
-        <section className="w-full lg:w-5/12 px-2">
+        <section className="w-full lg:w-5/12">
         <div>
-          <p className="text-white border-b border-gray-700 py-2"></p>
+          <p className="text-white border-b border-gray-700 py-2">
+
+          </p>
         </div>
-          <pre className="text-[#607B96] text-start">
- {`/**
+        <div>
+            <pre className="text-[#607B96] text-start">
+              {`/**
     * About me
     * I have 5 years of experience in web 
     * development lorem ipsum dolor sit amet, 
@@ -97,8 +100,11 @@ initialize();
     * nulla pariatur. Excepteur sint occaecat 
     * officia deserunt mollit anim id est laborum.
     */`
-}
-          </pre>
+              }
+            </pre>
+
+        </div>
+
         </section>
 
         <section className="w-full lg:w-5/12 pl-8 border-l border-[#1E2D3D]">
