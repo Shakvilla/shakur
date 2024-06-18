@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -24,49 +25,49 @@ className="text-lg py-3 pr-8 sm:pr-16 xl:pr-32 md:pr-8 lg:border-r border-gray-7
                 </div>
 
                 <div
-                    className={`lg:justify-between lg:flex-row lg:flex lg:items-center lg:space-x-4 ${menuOpen
+                    className={`lg:justify-between lg:flex-row lg:flex lg:items-center  ${menuOpen
                             ? 'flex absolute border-gray-700 rounded-b-lg h-screen w-11/12 top-0 bg-[#011627] z-50 flex-col'
                             : 'hidden'
                         } space-y-4 lg:space-y-0 lg:relative top-16 left-0 lg:top-0 w-full lg:w-auto bg-[#011627] lg:bg-transparent border-t lg:border-t-0 border-gray-700 lg:border-0 p-0 lg:p-0`}
                 >
-                    <a
+                    <Link
                         href="/"
-                        className={`text-gray-400 py-3 hover:text-white px-4 border-b lg:border-b-0 lg:border-r border-gray-700 ${isActive('/') ? 'border-b-2 border-b-[#FEA55F]' : ''
+                        className={`text-gray-400 py-3 hover:text-white px-4 border-b  lg:border-r border-gray-700 ${isActive('/') ? 'border-b  border-b-[#FEA55F]' : 'lg:border-b-0'
                             }`}
                     >
                         _hello
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         href="/about_me"
-                        className={`text-gray-400 py-3 hover:text-white px-4 border-b lg:border-b-0 lg:border-r border-gray-700 ${isActive('/about_me') ? 'border-b-2 border-b-[#FEA55F]' : ''
+                        className={`text-gray-400 py-3 hover:text-white px-4 border-b  lg:border-r border-gray-700 ${isActive('/about_me') ? 'border-b-2 border-b-[#FEA55F]' : 'lg:border-b-0'
                             }`}
                     >
                         _about_me
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         href="/projects"
-                        className={`text-gray-400 py-3 hover:text-white px-4 border-b lg:border-b-0 lg:border-r border-gray-700 ${isActive('/projects') ? 'border-b-2 border-b-[#FEA55F]' : ''
+                        className={`text-gray-400 py-3 hover:text-white px-4 border-b lg:border-r border-gray-700 ${isActive('/projects') ? 'border-b-2 border-b-[#FEA55F]' : 'lg:border-b-0'
                             }`}
                     >
                         _projects
-                    </a>
+                    </Link>
 
-                    <a
+                    <Link
                         href="#contact-me"
                         className="lg:hidden text-gray-400 border-b py-3 px-4 border-gray-700 hover:text-white"
                     >
                         _contact_me
-                    </a>
+                    </Link>
                 </div>
             </div>
             <div className="hidden lg:flex justify-end">
-                <a
+                <Link
                     href="/contact_me"
                     className={`text-gray-400 border-l py-3 pl-4 border-gray-700 hover:text-white ${isActive('/contact_me') ? 'border-b-2 border-[#FEA55F]' : ''
                         }`}
                 >
                     _contact_me
-                </a>
+                </Link>
             </div>
         </nav>
     );

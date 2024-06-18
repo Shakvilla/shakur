@@ -1,17 +1,10 @@
-import Head from 'next/head';
-import { useState } from 'react';
 import Game from '../components/Game';
-import { RiTwitterXLine, RiFacebookFill, RiMenu3Line, RiCloseLine } from "react-icons/ri";
-import { FaLinkedin, FaGithub, FaGreaterThan } from "react-icons/fa";
 import { ReactTyped } from "react-typed";
 import { TbArrowBigRightLines } from "react-icons/tb";
 
 export default function Home() {
-  const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+
   return (
        
 
@@ -24,7 +17,6 @@ export default function Home() {
               <h2 className=" ">_skills:</h2>
               <TbArrowBigRightLines />
             </div> 
-              {/* <h2>Front-end developer</h2> */}
             <ReactTyped
               backSpeed={50}
               onBegin={function noRefCheck() { }}
@@ -60,6 +52,7 @@ export default function Home() {
           </p>
 
             </div>
+       
        
           </section>
       

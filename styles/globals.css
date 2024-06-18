@@ -27,3 +27,30 @@ button {
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.348);
 }
+
+.code-container {
+  background: transparent;
+  color: #d6deeb;
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+}
+
+.code-keyword {
+  color: #c792ea;
+}
+
+.code-string {
+  color: #ecc48d;
+}
+
+.code-comment {
+  color: #637777;
+  font-style: italic;
+}
+
+.code-number {
+  color: #f78c6c;
+}

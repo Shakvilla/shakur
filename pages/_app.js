@@ -1,5 +1,7 @@
 import '../styles/globals.css'
 import Head from 'next/head';
+import { PagesProgressBar as ProgressBar } from 'next-nprogress-bar';
+
 
 import { Fira_Code } from 'next/font/google'
 import Navbar from '../components/Navbar';
@@ -18,6 +20,12 @@ function MyApp({ Component, pageProps }) {
       <Component {...pageProps} />
 
       <Footer />
+      <ProgressBar
+        height="4px"
+        color="#FEA55F"
+        options={{ showSpinner: false }}
+        shallowRouting
+      />
 
  </div>
  
