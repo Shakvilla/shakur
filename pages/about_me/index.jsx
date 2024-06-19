@@ -2,6 +2,10 @@
 // import { solarizedlight } from 'react-syntax-highlighter/dist/esm/styles/prism';// import virtualizedRenderer from 'react-syntax-highlighter-virtualized-renderer'; 
 import { MdArrowDropDown } from "react-icons/md";
 import CodeSnippet from '../../components/CodeSnippet'
+import { MdClose } from "react-icons/md";
+import { IoFolderOpen } from "react-icons/io5";
+import { FaChevronRight } from "react-icons/fa6";
+
 export default function About() {
 
 
@@ -40,16 +44,19 @@ initialize();
 
             </div>
               <div className="text-[#607B96] lg:w-10/12 border-r border-gray-700 h-full">
-                <div className="mt-0">
-                  <div className="py-2 flex justify-start items-center text-white border-y border-gray-700">
-                <MdArrowDropDown />
+            <div className="mt-0">
+              <div className="p-2 flex justify-start items-center text-white border-y border-gray-700">
+               <div className="text-2xl">
+                  <MdArrowDropDown />
 
-                   <p className="text-[#607B96]">personal-info</p>
-
+               </div>
+                   <p className="">personal-info</p>
                   </div>
                   <ul className="ml-4 px-2">
-                    <li className="mt-2">
-                      <p className="text-[#607B96]">bio</p>
+                    <li className="mt-2 flex items-center gap-2">
+                        <p className="text-[#607B96]  w-4 h-3"><FaChevronRight /></p>
+                        <p className="text-[#E99287]  w-4 h-3"> <IoFolderOpen /></p>
+                        <p className="text-[#607B96]">bio</p>
                     </li>
                     <li className="mt-2">
                       <p className="text-[#607B96]">interests</p>
@@ -76,15 +83,19 @@ initialize();
               </div>
         </section>
 
-        <section className="w-full lg:w-5/12">
-        <div>
-          <p className="text-white border-b border-gray-700 py-2">
+        <section className="w-full lg:w-6/12">
+          <div className="px-4 flex justify-start items-center text-[#607B96] border-y border-gray-700">
+         <div className="flex pr-2 justify-between  items-center w-4/12 border-r border-gray-700  py-2">
+              <p>personal-info</p>
+              <MdClose />
 
-          </p>
+         </div>
         </div>
         <div>
-            <pre className="text-[#607B96] text-start">
-              {`/**
+          
+    <pre className="text-[#607B96] text-start">
+    {`
+    /**
     * About me
     * I have 5 years of experience in web 
     * development lorem ipsum dolor sit amet, 
@@ -100,14 +111,14 @@ initialize();
     * nulla pariatur. Excepteur sint occaecat 
     * officia deserunt mollit anim id est laborum.
     */`
-              }
-            </pre>
+    }
+    </pre>
 
         </div>
 
         </section>
 
-        <section className="w-full lg:w-5/12 pl-8 border-l border-[#1E2D3D]">
+        <section className="w-full lg:w-4/12 pl-8 border-l border-[#1E2D3D]">
           <div className="text-[#607B96]">
             <p>// Code snippet showcase:</p>
           </div>

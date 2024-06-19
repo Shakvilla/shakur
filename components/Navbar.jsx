@@ -32,21 +32,21 @@ className="text-lg py-3 pr-8 sm:pr-16 xl:pr-32 md:pr-8 lg:border-r border-gray-7
                 >
                     <Link
                         href="/"
-                        className={`text-gray-400 py-3 hover:text-white px-4 border-b  lg:border-r border-gray-700 ${isActive('/') ? 'border-b  border-b-[#FEA55F]' : 'lg:border-b-0'
+                        className={`text-gray-400 py-3 hover:text-white px-4 border-b  lg:border-r border-gray-700 ${isActive('/') ? 'border-b text-white border-b-[#FEA55F]' : 'lg:border-b-0'
                             }`}
                     >
                         _hello
                     </Link>
                     <Link
                         href="/about_me"
-                        className={`text-gray-400 py-3 hover:text-white px-4 border-b  lg:border-r border-gray-700 ${isActive('/about_me') ? 'border-b-2 border-b-[#FEA55F]' : 'lg:border-b-0'
+                        className={`text-gray-400 py-3 hover:text-white px-4 border-b  lg:border-r border-gray-700 ${isActive('/about_me') ? 'border-b-2 text-white border-b-[#FEA55F]' : 'lg:border-b-0'
                             }`}
                     >
                         _about_me
                     </Link>
                     <Link
                         href="/projects"
-                        className={`text-gray-400 py-3 hover:text-white px-4 border-b lg:border-r border-gray-700 ${isActive('/projects') ? 'border-b-2 border-b-[#FEA55F]' : 'lg:border-b-0'
+                        className={`text-gray-400 py-3 hover:text-white px-4 border-b lg:border-r border-gray-700 ${isActive('/projects') ? 'border-b-2 text-white border-b-[#FEA55F]' : 'lg:border-b-0'
                             }`}
                     >
                         _projects
