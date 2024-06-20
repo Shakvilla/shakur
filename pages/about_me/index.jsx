@@ -5,6 +5,12 @@ import CodeSnippet from '../../components/CodeSnippet'
 import { MdClose } from "react-icons/md";
 import { IoFolderOpen } from "react-icons/io5";
 import { FaChevronRight } from "react-icons/fa6";
+import { FaEnvelopeOpenText } from "react-icons/fa6";
+import { IoPhonePortraitOutline } from "react-icons/io5";
+import { BiSolidMessageRounded } from "react-icons/bi";
+import { FaStar } from "react-icons/fa6";
+
+import Image from 'next/image'
 
 export default function About() {
 
@@ -34,14 +40,16 @@ initialize();
     <div className="min-h-screen flex flex-col bg-[#011627] text-white">
       {/* <Navbar /> */}
 
-      <main className="flex flex-1 w-full px-4  sm:px-6  md:px-8 mx-auto">
+      <main className="flex flex-1 w-full px-4  sm:px-6  md:px-0 mx-auto">
       
         <div>
 
         </div>
         <section className="w-full flex lg:w-2/12">
             <div className="lg:w-2/12 border-r border-gray-700 h-full">
+             <div className="">
 
+             </div>
             </div>
               <div className="text-[#607B96] lg:w-10/12 border-r border-gray-700 h-full">
             <div className="mt-0">
@@ -84,7 +92,7 @@ initialize();
                 </li>
                   </ul>
                   <div className="mt-4 px-2">
-                <div className="p-2 flex justify-start items-center text-white border-b border-gray-700">
+                <div className="p-2 flex justify-start items-center text-white border-y border-gray-700">
                   <div className="text-2xl">
                     <MdArrowDropDown />
 
@@ -92,8 +100,17 @@ initialize();
                   <p className="text-[#607B96]">contacts</p>
                 </div>
                     {/* <p className="text-[#607B96]">contacts</p> */}
-                    <p className="mt-2">user@gmail.com</p>
-                    <p className="mt-1">+3598246359</p>
+                <li className="mt-2 text-sm flex items-center gap-2">
+                  <p className="text-[#607B96]  w-4 h-3"> <FaEnvelopeOpenText /></p>
+                  <p className="text-[#607B96]">me@shakur.com</p>
+                </li>
+                    {/* <p className="mt-1">+3598246359</p> */}
+                <li className="mt-2 text-sm flex items-center gap-2">
+                  <p className="text-[#607B96]  w-4 h-3"> <IoPhonePortraitOutline />
+
+                  </p>
+                  <p className="text-[#607B96]">+233240472060</p>
+                </li>
                   </div>
                 </div>
               </div>
@@ -134,42 +151,58 @@ initialize();
 
         </section>
 
-        <section className="w-full lg:w-4/12 pl-8 border-l border-[#1E2D3D]">
-          <div className="text-[#607B96]">
-            <p>// Code snippet showcase:</p>
+        <section className="w-full lg:w-4/12 border-l border-[#1E2D3D]">
+          <div className=" flex justify-start py-2 items-center  border-y border-gray-700">
+            {/* <div className="py-2"> */}
+              {/* <MdArrowDropDown /> */}
+              <p className=" text-[#607B96]">sample code snippets</p>
+            {/* </div> */}
+            {/* <p className="">personal-info</p> */}
           </div>
-          <div className="mt-4">
+      
+          <div className="my-8 px-6">
+            <div className="text-[#607B96] mb-8">
+              <p>// Code snippet showcase:</p>
+            </div>
             <div className="mb-8">
-              <p className="text-[#4D5BCE]">@shakvilla</p>
-              <p className="text-[#607B96]">Created 5 months ago</p>
+              <div className="flex justify-between items-center ">
+                <div className="flex item-center gap-x-2">
+                  {/* <div className=" w-8 h-8 rounded-full"> */}
+                    <Image 
+                        src="/images/shakur.svg" 
+                        alt="shakur" 
+                        width="32"
+                        height="32"
+                        className="h-8 w-8 rounded-full"
+                    />
+
+                  {/* </div> */}
+                  <div className="text-sm">
+                    <p className="text-[#4D5BCE] font-medium">@shakvilla</p>
+                    <p className="text-[#607B96]">Created 5 months ago</p>
+                  </div>
+                 
+                </div>
+                <div className="flex gap-x-3">
+                  <div className="flex items-center text-[#607B96] gap-x-1">
+                    <BiSolidMessageRounded />
+
+                    <p className="text-white">details</p>
+
+                  </div>
+                  <div className="flex items-center text-[#607B96] gap-x-1">
+                    <FaStar />
+                    <p className="">3 stars</p>
+
+                  </div>
+                </div>
+              </div>
+           
               <div className="mt-2 bg-[#011221] border border-[#1E2D3D] p-4 rounded-md">
                 <CodeSnippet code={code1} language="typescript" />
-
-                {/* <SyntaxHighlighter 
-                    language="typescript" 
-                  style={solarizedlight} 
-                    showLineNumbers
-                    wrapLines 
-                  customStyle={customStyle}
-                    >
-                  {code1}
-                </SyntaxHighlighter> */}
               </div>
             </div>
-            {/* <div className="mb-8">
-              <p className="text-[#4D5BCE]">@username</p>
-              <p className="text-[#607B96]">Created 9 months ago</p>
-              <div className="mt-2 bg-[#011221] border border-[#1E2D3D] p-4 rounded-md">
-                <SyntaxHighlighter
-                  language="typescript"
-                  style={monokai}
-                  showLineNumbers
-                  wrapLines
-                >
-                  {code2}
-                </SyntaxHighlighter>
-              </div>
-            </div> */}
+        
           </div>
         </section>
       </main>
