@@ -46,23 +46,28 @@ initialize();
               <div className="text-[#607B96] lg:w-10/12 border-r border-gray-700 h-full">
             <div className="mt-0">
               <div className="p-2 flex justify-start items-center text-white border-y border-gray-700">
-               <div className="text-2xl">
-                  <MdArrowDropDown />
+                <div className="text-2xl">
+                   <MdArrowDropDown />
 
-               </div>
+                </div>
                    <p className="">personal-info</p>
-                  </div>
+              </div>
                   <ul className="ml-4 px-2">
                     <li className="mt-2 flex items-center gap-2">
                         <p className="text-[#607B96]  w-4 h-3"><FaChevronRight /></p>
                         <p className="text-[#E99287]  w-4 h-3"> <IoFolderOpen /></p>
                         <p className="text-[#607B96]">bio</p>
                     </li>
-                    <li className="mt-2">
+                    {/* <li className="mt-2">
                       <p className="text-[#607B96]">interests</p>
-                    </li>
-                    <li className="mt-2">
-                      <p className="text-[#607B96]">education</p>
+                    </li> */}
+                <li className="mt-2 flex items-center gap-2">
+                  <p className="text-[#607B96]  w-4 h-3"><FaChevronRight /></p>
+                  <p className="text-[#43D9AD]  w-4 h-3"> <IoFolderOpen /></p>
+                  <p className="text-[#607B96]">interests</p>
+                </li>
+                    {/* <li className="mt-2">
+                      <p className="text-[#]">education</p>
                       <ul className="ml-4">
                         <li className="mt-2">
                           <p className="text-[#607B96]">high-school</p>
@@ -71,11 +76,22 @@ initialize();
                           <p className="text-[#607B96]">university</p>
                         </li>
                       </ul>
-                    </li>
+                    </li> */}
+                <li className="mt-2 flex items-center gap-2">
+                  <p className="text-[#607B96]  w-4 h-3"><FaChevronRight /></p>
+                  <p className="text-[#3A49A4]  w-4 h-3"> <IoFolderOpen /></p>
+                  <p className="text-[#607B96]">education</p>
+                </li>
                   </ul>
                   <div className="mt-4 px-2">
-                    
-                    <p className="text-[#607B96]">contacts</p>
+                <div className="p-2 flex justify-start items-center text-white border-b border-gray-700">
+                  <div className="text-2xl">
+                    <MdArrowDropDown />
+
+                  </div>
+                  <p className="text-[#607B96]">contacts</p>
+                </div>
+                    {/* <p className="text-[#607B96]">contacts</p> */}
                     <p className="mt-2">user@gmail.com</p>
                     <p className="mt-1">+3598246359</p>
                   </div>
