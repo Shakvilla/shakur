@@ -1,8 +1,9 @@
+'use client'
 import React from 'react';
 import Image from 'next/image';
 import { BiSolidMessageRounded } from "react-icons/bi";
 import { FaStar } from "react-icons/fa6";
-import CodeSnippet from '../../../components/CodeSnippet'
+import CodeSnippet from './CodeSnippet'
 const CodeSnippetSection = ({ code, language }) => (
     <div className="mb-8">
         <div className="flex justify-between items-center">

@@ -3,14 +3,10 @@ import { MdArrowDropDown, MdClose } from "react-icons/md";
 import { IoGameController } from "react-icons/io5";
 import { AiFillCode } from "react-icons/ai";
 import { RiExchange2Fill } from "react-icons/ri";
-import SidebarIcon from './components/SidebarIcon';
-import DropdownMenu from './components/DropdownMenu';
-import CodeSnippetSection from './components/CodeSnippetSection';
-import ContactInfo from './components/ContactInfo';
-// import SidebarIcon from './SidebarIcon';
-// import DropdownMenu from './DropdownMenu';
-// import ContactInfo from './ContactInfo';
-// import CodeSnippetSection from './CodeSnippetSection';
+import SidebarIcon from '../../components/SidebarIcon';
+import DropdownMenu from '../../components/DropdownMenu';
+import CodeSnippetSection from '../../components/CodeSnippetSection';
+import ContactInfo from '../../components/ContactInfo';
 
 export default function About() {
   const [openMenu, setOpenMenu] = useState(null);
