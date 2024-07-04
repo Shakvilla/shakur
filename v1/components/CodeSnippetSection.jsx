@@ -4,6 +4,8 @@ import Image from 'next/image';
 import { BiSolidMessageRounded } from "react-icons/bi";
 import { FaStar } from "react-icons/fa6";
 import CodeSnippet from './CodeSnippet'
+import Link from 'next/link';
+
 const CodeSnippetSection = ({ code, language }) => (
     <div className="mb-8">
         <div className="flex justify-between items-center">
@@ -16,7 +18,7 @@ const CodeSnippetSection = ({ code, language }) => (
                     className="h-8 w-8 rounded-full"
                 />
                 <div className="text-sm">
-                    <p className="text-[#4D5BCE] font-medium">@shakvilla</p>
+                    <Link href="https://github.com/Shakvilla" target="_blank" className="text-[#4D5BCE] font-medium">@shakvilla</Link>
                     <p className="text-[#607B96]">Created 5 months ago</p>
                 </div>
             </div>

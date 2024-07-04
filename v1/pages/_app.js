@@ -22,6 +22,8 @@ function MyApp({ Component, pageProps }) {
  
     <div className="absolute top-0 text-white p-4  md:p-8 min-h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px] overflow-hidden">
       <div className="  mx-auto h-full 2xl:h-screen     w-full border border-gray-700 rounded-md bg-[#011627]">
+       
+       
         <Navbar />
 
         <Component {...pageProps} />
