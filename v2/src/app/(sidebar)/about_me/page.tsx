@@ -1,8 +1,6 @@
-'use client'
-import { useState } from "react";
+"use client";
+import React, { useState } from "react";
 import { MdArrowDropDown, MdClose } from "react-icons/md";
-
-
 import Link from "next/link";
 import DropdownMenu from "@/app/_components/DropdownMenu";
 import CodeSnippetSection from "@/app/_components/codesnippet-section";
@@ -10,8 +8,8 @@ import LeftSidebar from "@/app/_components/left-sidebar";
 import RightSidebar from "@/app/_components/right-sidebar";
 import ContactInfo from "@/app/_components/contact-info";
 
-export default function About() {
-  const [openMenu, setOpenMenu] = useState(null);
+const About: React.FC = () => {
+  const [openMenu, setOpenMenu] = useState<string | null>(null);
 
   const code1 = `const initialize = (): void => {
   config.cloudinaryConfig();
@@ -33,7 +31,7 @@ initialize();
 });
 `;
 
-  const handleMenuClick = (menu: any) => {
+  const handleMenuClick = (menu: string) => {
     setOpenMenu(openMenu === menu ? null : menu);
   };
 
@@ -102,7 +100,6 @@ initialize();
               personal-info / bio
             </p>
             <pre className="text-[#607B96] text-start whitespace-pre-wrap">
-              {/* Children page */}
               {`
 I have 5 years of experience in web development lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat officia deserunt mollit anim id est laborum.
               `}
@@ -161,9 +158,11 @@ I have 5 years of experience in web development lorem ipsum dolor sit amet, cons
             </pre>
           </div>
         </section>
-    
+
         <RightSidebar />
       </main>
     </div>
   );
-}
+};
+
+export default About;

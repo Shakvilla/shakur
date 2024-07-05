@@ -6,6 +6,23 @@ import NavLink from "./nav-links";
 const Navbar: React.FC = () => {
   const [menuOpen, toggleMenu] = useToggle(false);
 
+  const navigation = [
+    {
+      url: "/",
+      label: "_hello",
+      additionalClasses: "",
+    },
+    {
+      url: "/about_me",
+      label: "_about_me",
+      additionalClasses: "",
+    },
+    {
+      url: "/projects",
+      label: "_projects",
+      additionalClasses: "",
+    }
+  ];
   return (
     <nav className="flex flex-wrap lg:flex-nowrap justify-between items-center border-b border-b-gray-700 px-4 sm:px-6 md:px-8">
       <div className="flex w-full lg:w-0 justify-between items-center space-x-4">
@@ -31,11 +48,17 @@ const Navbar: React.FC = () => {
               : "hidden"
           } space-y-4 lg:space-y-0 lg:relative top-16 left-0 lg:top-0 w-full lg:w-auto bg-[#011627] lg:bg-transparent border-t lg:border-t-0 border-gray-700 lg:border-0 p-0 lg:p-0`}
         >
-          <NavLink href="/" label="_hello" />
+          {/* <NavLink href="/" label="_hello" />
           <NavLink href="/about_me" label="_about_me" />
           <NavLink href="/projects" label="_projects" />
+         */}
+          {navigation.map((nav, index) => (
+            <div key={index}>
+              <NavLink href={nav.url} label={nav.label} />
+            </div>
+          ))}
           <NavLink
-            href="#contact-me"
+            href="/contact-me"
             label="_contact_me"
             additionalClasses="lg:hidden"
           />

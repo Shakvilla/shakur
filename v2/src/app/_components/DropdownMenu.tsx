@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
-import MenuItem from "./MenuItem";
+// import MenuItem from "./MenuItem";
 import { IDropdownMenuProps } from "@/interfaces/idrop-down";
+import MenuItem from "./menu-item";
 
 
 

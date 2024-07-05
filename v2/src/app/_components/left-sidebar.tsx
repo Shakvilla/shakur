@@ -9,6 +9,7 @@ import { RiExchange2Fill } from "react-icons/ri";
 import Link from "next/link";
 import SidebarIcon from "./sidebar-icon-props";
 import DropdownMenu from "./DropdownMenu";
+import ContactInfo from "./contact-info";
 
 const LeftSidebar: React.FC = () => {
   const [openMenu, setOpenMenu] = useState<string | null>(null);
