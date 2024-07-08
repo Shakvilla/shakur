@@ -23,13 +23,16 @@ const config: Config = {
       },
 
       animation: {
-        move: "move 5s linear infinite",
+        "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
       },
       keyframes: {
-        move: {
-          "0%": { transform: "translateX(-200px)" },
-          "100%": { transform: "translateX(200px)" },
+      
+                "border-beam": {
+          "100%": {
+            "offset-distance": "100%",
+          },
         },
+
       },
     },
   },

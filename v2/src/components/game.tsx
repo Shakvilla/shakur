@@ -264,6 +264,7 @@ const Game: React.FC = () => {
         <div className="flex justify-end items-end bottom-0 right-0 mb-4 mr-4">
           <button
             onClick={handleSkip}
+            
             className="bg-transparent px-4 py-2 rounded border border-white font-normal text-white text-sm"
           >
             skip
