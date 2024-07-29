@@ -27,7 +27,7 @@ const LeftSidebar: React.FC = () => {
 
   return (
     <section className="w-full flex lg:w-2/12">
-      <div className="lg:w-2/12 border-r border-gray-700 h-full">
+      <div className="hidden xl:block xl:w-2/12 border-r border-gray-700 h-full">
         <nav className="grid gap-1 p-2">
           <TooltipProvider>
             <Tooltip>
@@ -49,7 +49,7 @@ const LeftSidebar: React.FC = () => {
           {/* <SidebarIcon IconComponent={IoGameController} /> */}
         </nav>
       </div>
-      <div className="text-[#607B96] lg:w-10/12 border-r border-gray-700 h-full">
+      <div className="hidden xl:block text-[#607B96] xl:w-10/12 border-r border-gray-700 h-full">
         <div className="mt-0">
           <div className="p-2 flex justify-start items-center text-white border-y border-gray-700">
             <div className="text-2xl">
@@ -93,6 +93,8 @@ const LeftSidebar: React.FC = () => {
           <ContactInfo />
         </div>
       </div>
+
+
     </section>
   );
 };

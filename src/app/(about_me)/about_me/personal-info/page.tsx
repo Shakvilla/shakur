@@ -5,7 +5,7 @@ import { MdClose } from "react-icons/md";
 const PersonalInfo: React.FC = () => {
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#011627] text-white">
+    <div className="xl:min-h-screen flex flex-col bg-[#011627] text-white">
       {/* <main className="lg:hidden flex flex-1 flex-col lg:flex-row w-full px-4 sm:px-6 md:px-0 mx-auto">
         <div className="flex lg:hidden justify-between items-center bg-[#011627] p-4 border-b border-gray-700">
           <p className="text-2xl text-[#607B96]">personal-info</p>
@@ -87,18 +87,45 @@ I have 5 years of experience in web development lorem ipsum dolor sit amet, cons
           </div>
         </section>
       </main> */}
-      <main className="hidden lg:flex flex-1 w-full px-4 sm:px-6 md:px-0 mx-auto">
+      <main className=" xl:flex xl:flex-1 w-full px-4 sm:px-6 md:px-0 mx-auto">
         <></>
         <section className="w-full">
           <div className="px-4 flex justify-start items-center text-[#607B96] border-y border-gray-700">
-            <div className="flex pr-2 justify-between items-center w-4/12 border-r border-gray-700 py-2">
+            <div className="flex pr-2 justify-between items-center  xl:w-4/12 border-r border-gray-700 py-2">
               <p>personal-info</p>
               <MdClose />
             </div>
           </div>
 
           <div>
-            <pre className="text-[#607B96] text-start">
+            <pre className=" hidden xl:block text-[#607B96] text-start">
+              {`
+  /**
+  * About Me
+  * 
+  * I am a Fullstack Engineer with extensive 
+  * experience in creating intuitive web applications 
+  * using NodeJs, ReactJs, ExpressJs, MongoDB,  
+  * and MySQL. My projects focus on delivering, 
+  * high-quality responsive, and dynamic 
+  * user experiences.
+  * 
+  * I excel in agile environments, collaborating with 
+  * cross-functional teams to achieve goals. 
+  * My strong communication skills ensure effective 
+  * stakeholder engagement and project success. 
+  * I am committed to continuous learning and 
+  * staying updated with the latest technologies.
+  * 
+  * I am passionate about delivering value through 
+  * technology and am excited to contribute 
+  * to a forward-thinking team. 
+  * Please feel free to reach out for further 
+  * information or to schedule an interview.
+  */`}
+            </pre>
+
+            <pre className="my-4 text-[0.5rem] tracking-wider  xl:hidden text-[#607B96] text-start">
               {`
   /**
   * About Me

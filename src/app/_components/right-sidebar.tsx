@@ -23,14 +23,14 @@ initialize();
 });
 `;
   return (
-    <section className="w-full lg:w-5/12 border-l border-[#1E2D3D]">
-      <div className="flex justify-start py-2 items-center border-y border-gray-700">
+    <section className="w-full xl:w-5/12 border-l border-[#1E2D3D]">
+      <div className="flex justify-center xl:justify-start py-2 items-center border-y border-gray-700">
         <p className="text-[#607B96] pl-6">Code snippet showcase:</p>
       </div>
-      <div className="relative mx-6 px-2">
+      <div className="relative lg:mx-6 p-3">
         <CodeSnippetSection code={code1} language="typescript" />
       </div>
-      <div className="relative mx-6 px-2">
+      <div className="relative lg:mx-6 p-3">
         <CodeSnippetSection code={code2} language="typescript" />
       </div>
     </section>

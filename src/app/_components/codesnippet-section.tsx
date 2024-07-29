@@ -31,15 +31,15 @@ const CodeSnippetSection: React.FC<ICodeSnippetSectionProps> = ({
           >
             @shakvilla
           </Link>
-          <p className="text-[#607B96]">Created 5 months ago</p>
+          <p className="text-[#607B96] text-xs xl:text-base">Created 5 months ago</p>
         </div>
       </div>
-      <div className="flex gap-x-3">
-        <div className="flex items-center text-[#607B96] gap-x-1">
+      <div className="flex flex-col xl:flex-row gap-x-3 gap-y-1">
+        <div className="flex text-xs xl:text-base items-center text-[#607B96] gap-x-1">
           <BiSolidMessageRounded />
-          <p className="text-white">details</p>
+          <p className="text-white text-xs xl:text-base">details</p>
         </div>
-        <div className="flex items-center text-[#607B96] gap-x-1">
+        <div className="flex items-center text-xs xl:text-base text-[#607B96] gap-x-1">
           <FaStar />
           <p className="">3 stars</p>
         </div>

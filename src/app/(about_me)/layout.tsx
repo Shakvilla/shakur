@@ -8,8 +8,8 @@ export default function SidebarLayout({
   children: React.ReactNode;
 }) {
   return (
-    <section className="flex ">
-      {/* Include shared UI here e.g. a header or sidebar */}
+    <section className="flex flex-col xl:flex-row ">
+      
       <LeftSidebar />
       <main className="relative h-full flex-1">
        

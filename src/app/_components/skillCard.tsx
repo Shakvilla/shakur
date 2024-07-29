@@ -1,6 +1,6 @@
 import Marquee from "@/components/ui/marquee";
 import { cn } from "@/utils/cn";
-import { SiExpress, SiKubernetes, SiMongodb, SiMongoose, SiNextdotjs, SiNginx, SiNodedotjs, SiReact, SiTailwindcss, SiTypescript } from "@icons-pack/react-simple-icons";
+import { SiDocker, SiElasticsearch, SiExpress, SiKubernetes, SiMongodb, SiMongoose, SiNextdotjs, SiNginx, SiNodedotjs, SiReact, SiTailwindcss, SiTypescript } from "@icons-pack/react-simple-icons";
 
 const reviews = [
   {
@@ -59,6 +59,16 @@ const reviews = [
     name: "NGINX",
     img: <SiNginx title="Nginx" color="#009639" size={24} />,
   },
+  {
+    id: 10,
+    name: "Docker",
+    img: <SiDocker title="Nginx" color="#2496ED" size={24} />,
+  },
+  {
+    id: 11,
+    name: 'Elasticsearch',
+    img: <SiElasticsearch title="Elastic Search" color="#005571" size={24}/>
+  }
 ];
 
 const firstRow = reviews.slice( reviews.length / 2);
