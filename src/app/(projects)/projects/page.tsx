@@ -3,28 +3,25 @@ import { useState, useEffect } from "react";
 
 import ProjectCard from "../_components/project-card";
 import Sidebar from "../_components/sidebar";
-
+import projectImage from "../../../../public/images/thumnail.png"
 
 const projects = [
   {
     title: "Project 1 // _ui-animations",
     description: "Duis aute irure dolor in velit esse cillum dolore.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imageUrl: projectImage,
     techStacks: ["React", "CSS", "Angular"],
   },
   {
     title: "Project 2 // _tetris-game",
     description: "Duis aute irure dolor in velit esse cillum dolore.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imageUrl:projectImage,
     techStacks: ["React", "JavaScript", "Flutter"],
   },
   {
     title: "Project 3 // _ethereum",
     description: "Duis aute irure dolor in velit esse cillum dolore.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imageUrl:projectImage,    
     techStacks: ["Vue", "JavaScript", "HTML", "Gatsby"],
   },
   // Add more projects as needed

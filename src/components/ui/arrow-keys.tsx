@@ -11,9 +11,9 @@ import {
 const ArrowKeys: React.FC<IArrowKeysProps> = ({ onDirectionChange }) => {
   return (
     <div className="flex flex-col items-center lg:items-start 2xl:items-center justify-center p-4 glassmorphic rounded-lg border border-gray-700 mt-2">
-      <p className="text-white text-sm 2xl:text-base">// use keyboard arrows</p>
+      <p className="text-white text-sm 2xl:text-base"> use keyboard arrows</p>
       <p className="text-white text-sm 2xl:text-base">
-        // or arrows below to play
+         or arrows below to play
       </p>
       <div className="flex flex-col items-center mt-4">
         <button

@@ -1,5 +1,4 @@
 'use client'
-// import Game from "../components/Game";
 import { ReactTyped } from "react-typed";
 import { TbArrowBigRightLines } from "react-icons/tb";
 import Game from "@/components/game";
@@ -43,18 +42,18 @@ export default function Home() {
         </div>
         <div className="mt-12 text-[#607B96]">
           <p className=" mb-1 text-xs md:text-sm xl:text-base 2xl:text-4xl">
-            // complete the game to continue
+            complete the game to continue
           </p>
           <p className="text-xs mb-1 md:text-sm xl:text-lg 2xl:text-4xl">
-            // you can also see it on my Github page
+            you can also see it on my Github page
           </p>
           <p className="text-xs md:text-sm  xl:text-lg 2xl:text-4xl">
             <span className="text-[#4D5BCE]">const</span>{" "}
-            <span className="text-green-400">githubLink</span> = "
+            <span className="text-green-400">githubLink</span> = &quot;
             <a href="https://github.com/shakvilla" className="text-[#E99287]">
               https://github.com/shakvilla
             </a>
-            "
+            &quot;
           </p>
         </div>
       </section>

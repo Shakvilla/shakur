@@ -28,6 +28,57 @@ const Game: React.FC = () => {
   const router = useRouter();
   const gameInterval = useRef<NodeJS.Timeout | null>(null);
 
+   const moveSnake = () => {
+     let newSnake = [...snake];
+     let head = { ...newSnake[newSnake.length - 1] };
+
+     switch (direction) {
+       case "UP":
+         head.y -= 10;
+         break;
+       case "DOWN":
+         head.y += 10;
+         break;
+       case "LEFT":
+         head.x -= 10;
+         break;
+       case "RIGHT":
+         head.x += 10;
+         break;
+     }
+
+     // Wrap around edges
+     if (canvasRef.current) {
+       if (head.x < 0) head.x = canvasRef.current.width - 10;
+       if (head.x >= canvasRef.current.width) head.x = 0;
+       if (head.y < 0) head.y = canvasRef.current.height - 10;
+       if (head.y >= canvasRef.current.height) head.y = 0;
+     }
+
+     // Check if snake touches itself
+     for (let i = 0; i < newSnake.length; i++) {
+       if (newSnake[i].x === head.x && newSnake[i].y === head.y) {
+         resetGame();
+         return;
+       }
+     }
+
+     newSnake.push(head);
+     newSnake.shift();
+
+     if (head.x === food.x && head.y === food.y) {
+       newSnake.unshift({ x: head.x, y: head.y }); // Add a new segment to the snake
+       setFood(generateRandomFood());
+       setFoodLeft(Math.max(0, foodLeft - 1)); // Ensure foodLeft does not become negative
+       if (foodLeft - 1 === 0) {
+         setWellDone(true); // Display "Well Done" message
+         if (gameInterval.current) clearInterval(gameInterval.current); // Stop the game
+       }
+     }
+
+     setSnake(newSnake);
+   };
+
   useEffect(() => {
     if (gameStarted && !paused && !wellDone) {
       gameInterval.current = setInterval(moveSnake, 100);
@@ -104,57 +155,7 @@ const Game: React.FC = () => {
     setPaused(!paused);
   };
 
-  const moveSnake = () => {
-    let newSnake = [...snake];
-    let head = { ...newSnake[newSnake.length - 1] };
-
-    switch (direction) {
-      case "UP":
-        head.y -= 10;
-        break;
-      case "DOWN":
-        head.y += 10;
-        break;
-      case "LEFT":
-        head.x -= 10;
-        break;
-      case "RIGHT":
-        head.x += 10;
-        break;
-    }
-
-    // Wrap around edges
-    if (canvasRef.current) {
-      if (head.x < 0) head.x = canvasRef.current.width - 10;
-      if (head.x >= canvasRef.current.width) head.x = 0;
-      if (head.y < 0) head.y = canvasRef.current.height - 10;
-      if (head.y >= canvasRef.current.height) head.y = 0;
-    }
-
-    // Check if snake touches itself
-    for (let i = 0; i < newSnake.length; i++) {
-      if (newSnake[i].x === head.x && newSnake[i].y === head.y) {
-        resetGame();
-        return;
-      }
-    }
-
-    newSnake.push(head);
-    newSnake.shift();
-
-    if (head.x === food.x && head.y === food.y) {
-      newSnake.unshift({ x: head.x, y: head.y }); // Add a new segment to the snake
-      setFood(generateRandomFood());
-      setFoodLeft(Math.max(0, foodLeft - 1)); // Ensure foodLeft does not become negative
-      if (foodLeft - 1 === 0) {
-        setWellDone(true); // Display "Well Done" message
-        if (gameInterval.current) clearInterval(gameInterval.current); // Stop the game
-      }
-    }
-
-    setSnake(newSnake);
-  };
-
+ 
   const resetGame = () => {
     setGameStarted(false);
     setGameOver(true);
@@ -250,7 +251,7 @@ const Game: React.FC = () => {
 
         <div className="flex flex-col justify-start items-center h-full">
           <div className="text-sm">
-            <p>// food left</p>
+            <p> food left</p>
             <div className="grid grid-cols-5 gap-2">
               {Array(foodLeft)
                 .fill(null)

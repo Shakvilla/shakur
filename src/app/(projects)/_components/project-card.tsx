@@ -10,7 +10,7 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
 }) => {
   return (
     <div className="relative w-full h-full bg-[#011221] border border-[#1E2D3D] rounded-lg p-4 m-2">
-      <img
+      <Image
         src={imageUrl}
      
         alt={title}
@@ -20,8 +20,8 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
         <h3 className="text-lg text-[#4D5BCE]">{title}</h3>
         <p className="text-sm text-[#607B96] mt-2">{description}</p>
         <div className="flex gap-1 my-2 text-[#607B96]">
-          {techStacks.map((t) => (
-            <p className="text-sm ">{`${t},`}</p>
+          {techStacks.map((t, index) => (
+            <p className="text-sm " key={index}>{`${t},`}</p>
           ))}
         </div>
         <button className="bg-[#FEA55F] px-4 py-1 rounded font-normal text-[#01080E] mt-2">
