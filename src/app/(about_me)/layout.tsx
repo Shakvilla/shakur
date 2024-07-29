@@ -1,5 +1,4 @@
 "use client"
-import { MdClose } from "react-icons/md";
 import LeftSidebar from "../_components/left-sidebar";
 import RightSidebar from "../_components/right-sidebar";
 
