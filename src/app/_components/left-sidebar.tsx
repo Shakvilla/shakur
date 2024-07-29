@@ -10,6 +10,13 @@ import Link from "next/link";
 import SidebarIcon from "./sidebar-icon-props";
 import DropdownMenu from "./DropdownMenu";
 import ContactInfo from "./contact-info";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+
 
 const LeftSidebar: React.FC = () => {
   const [openMenu, setOpenMenu] = useState<string | null>(null);
@@ -21,10 +28,25 @@ const LeftSidebar: React.FC = () => {
   return (
     <section className="w-full flex lg:w-2/12">
       <div className="lg:w-2/12 border-r border-gray-700 h-full">
-        <nav className="flex flex-col">
-          <SidebarIcon IconComponent={AiFillCode} />
-          <SidebarIcon IconComponent={RiExchange2Fill} />
-          <SidebarIcon IconComponent={IoGameController} />
+        <nav className="grid gap-1 p-2">
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Link
+                  href="#"
+                  className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+                >
+                  {/* <Home className="h-5 w-5" /> */}
+                  <SidebarIcon IconComponent={RiExchange2Fill} />
+
+                  <span className="sr-only"></span>
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent side="right">About Me</TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+
+          {/* <SidebarIcon IconComponent={IoGameController} /> */}
         </nav>
       </div>
       <div className="text-[#607B96] lg:w-10/12 border-r border-gray-700 h-full">
@@ -42,10 +64,10 @@ const LeftSidebar: React.FC = () => {
               iconColor="text-[#E99287]"
               label="bio"
             >
-              <Link href="#" className="my-2">
-                About Me
+              <Link href="/about_me/personal-info" >
+                 Info
               </Link>
-              <Link href="#" className="my-2">
+              <Link href="/about_me/skills">
                 Skills
               </Link>
             </DropdownMenu>

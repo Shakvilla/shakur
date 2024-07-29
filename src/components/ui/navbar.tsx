@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
       additionalClasses: "",
     },
     {
-      url: "/about_me",
+      url: "/about_me/personal-info",
       label: "_about_me",
       additionalClasses: "",
     },

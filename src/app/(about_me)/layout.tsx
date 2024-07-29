@@ -1,14 +1,23 @@
+"use client"
+import { MdClose } from "react-icons/md";
+import LeftSidebar from "../_components/left-sidebar";
+import RightSidebar from "../_components/right-sidebar";
+
 export default function SidebarLayout({
   children, // will be a page or nested layout
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <section>
+    <section className="flex ">
       {/* Include shared UI here e.g. a header or sidebar */}
-      <nav></nav>
+      <LeftSidebar />
+      <main className="relative h-full flex-1">
+       
 
-      {children}
+        {children}
+      </main>
+      <RightSidebar />
     </section>
   );
 }

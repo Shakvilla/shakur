@@ -19,7 +19,7 @@ const DropdownMenu: React.FC<IDropdownMenuProps> = ({
       iconColor={iconColor}
       label={label}
     />
-    {isOpen && <ul className="ml-8">{children}</ul>}
+    {isOpen && <ul className="ml-8 flex flex-col my-2">{children}</ul>}
   </>
 );
 
