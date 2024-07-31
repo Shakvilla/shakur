@@ -8,29 +8,33 @@ const Navbar: React.FC = () => {
 
   const navigation = [
     {
+      id: 0,
       url: "/",
       label: "_hello",
       additionalClasses: "",
     },
     {
+      id: 1,
       url: "/about_me/personal-info",
       label: "_about_me",
       additionalClasses: "",
     },
     {
+      id: 2,
       url: "/projects",
       label: "_projects",
       additionalClasses: "",
     }
   ];
   return (
-    <nav className="flex flex-wrap lg:flex-nowrap justify-between items-center border-b border-b-gray-700 px-4 sm:px-6 md:px-8">
-      <div className="flex w-full lg:w-0 justify-between items-center space-x-4">
+    // <header className="w-full flex flex-col">
+    <nav className="flex text-[#607B96] xl:text-[13px] xl:h-[45px] flex-wrap lg:flex-nowrap justify-between border-b border-b-gray-700">
+      <div className="flex w-full ">
         <a
           href="/"
-          className="text-lg py-3 pr-8 sm:pr-16 xl:pr-32 md:pr-8 lg:border-r border-gray-700"
+          className="2xl:px-8 px-6 hover:text-white hover:bg-gray-800 lg:h-full xl:flex xl:items-center xl:min-w-[275px] xl:max-w-[275px] 2xl:min-w-[310px] 2xl:max-w-[310px] lg:border-r border-gray-700"
         >
-          abdul_shekur
+          abdul-shekur-a-clement
         </a>
         <div className="block lg:hidden">
           <button
@@ -42,36 +46,40 @@ const Navbar: React.FC = () => {
         </div>
 
         <div
-          className={`lg:justify-between lg:flex-row lg:flex lg:items-center ${
+          className={`lg:justify-between lg:flex-row lg:flex  lg:items-center ${
             menuOpen
               ? "flex absolute border-gray-700 rounded-b-lg h-screen w-11/12 top-0 bg-[#011627] z-50 flex-col"
               : "hidden"
-          } space-y-4 lg:space-y-0 lg:relative top-16 left-0 lg:top-0 w-full lg:w-auto bg-[#011627] lg:bg-transparent border-t lg:border-t-0 border-gray-700 lg:border-0 p-0 lg:p-0`}
+          }   h-full lg:relative top-16 left-0 lg:top-0 w-full lg:w-auto bg-[#011627] lg:bg-transparent  border-gray-700  p-0 `}
         >
           {/* <NavLink href="/" label="_hello" />
           <NavLink href="/about_me" label="_about_me" />
           <NavLink href="/projects" label="_projects" />
          */}
-          {navigation.map((nav, index) => (
-            <div key={index}>
+          {navigation.map((nav) => (
+            <div key={nav.id} className="h-full relative">
               <NavLink href={nav.url} label={nav.label} />
             </div>
           ))}
-          <NavLink
-            href="/contact-me"
-            label="_contact_me"
-            additionalClasses="lg:hidden"
-          />
+          <div className="lg:hidden">
+            <NavLink
+              href="/contact_me"
+              label="_contact_me"
+              additionalClasses=""
+            />
+          </div>
         </div>
       </div>
+
       <div className="hidden lg:flex justify-end">
         <NavLink
           href="/contact_me"
           label="_contact_me"
-          additionalClasses="border-l py-3 pl-4"
+          additionalClasses="border-l  pl-4"
         />
       </div>
     </nav>
+    // </header>
   );
 };
 

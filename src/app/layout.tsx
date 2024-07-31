@@ -29,7 +29,7 @@ export default function RootLayout({
       <body className={`${fira.className}`}>
         <Providers>
           <div className="absolute top-0 text-white p-4  md:p-8 min-h-screen w-screen bg-[#010C15]  bg-[size:20px_20px] overflow-hidden">
-            <div className="  mx-auto h-full 2xl:h-screen     w-full border border-gray-700 rounded-md bg-[#011627]">
+            <div className="  mx-auto h-full  2xl:max-w-8xl     w-full border border-gray-700 rounded-md bg-[#011627]">
               <Navbar />
               {children}
               <Footer />

@@ -5,15 +5,17 @@ import Game from "@/components/game";
 
 export default function Home() {
   return (
-    <div className="flex h-full  flex-wrap items-center justify-between py-10 px-4 sm:py-16 sm:px-6 md:py-20 md:px-8">
-      <section id="hello" className="w-full lg:w-1/2">
-        <p className="2xl:text-6xl text-[#E5E9F0]">Hi all. I am</p>
-        <h1 className="2xl:text-9xl text-3xl sm:text-4xl font-medium 2xl:font-extrabold 2xl:tracking-wide text-[#E5E9F0]">
-          Abdul Shekur
-        </h1>
-        <div className="flex 2xl:text-6xl items-center gap-4 text-xs md:text-sm lg:text-lg tracking-widest text-[#4D5BCE]">
-          <div className="flex items-center gap-1 text-xs md:text-sm lg:text-base 2xl:text-6xl">
-            <h2 className=" ">_skills:</h2>
+    <div className="flex h-full  flex-wrap items-center justify-between py-10 px-4 sm:py-16 sm:px-6 md:py-20 ">
+      <section id="hello" className="w-full lg:w-1/2 xl:pl-[275px] 2xl:pl-[310px] xl:px-8">
+        <p className="2xl:text-lg text-[#E5E9F0] my-4">Hi all. I am</p>
+        <h2 className=" text-3xl sm:text-3xl font-medium 2xl:text-[62px] 2xl:tracking-wide text-[#E5E9F0]">
+          Abdul Shekur A Clement
+        </h2>
+        <div className="flex  items-center gap-4 text-xs md:text-sm lg:text-lg 2xl:text-3xl tracking-widest text-[#4d5bce]">
+          <div className="flex items-center gap-1  my-2">
+            <h2 className="text-xs 2xl:tracking-widest md:text-sm lg:text-base  2xl:text-3xl">
+              {`_skills:`}
+            </h2>
             <TbArrowBigRightLines />
           </div>
           <ReactTyped
@@ -40,14 +42,14 @@ export default function Home() {
             typedRef={function noRefCheck() {}}
           />
         </div>
-        <div className="mt-12 text-[#607B96]">
-          <p className=" mb-1 text-xs md:text-sm xl:text-base 2xl:text-4xl">
-            complete the game to continue
+        <div className="mt-12 xl:mt-6 text-[#607B96]">
+          <p className=" mb-1 text-xs md:text-sm">
+            {`// complete the game to continue`}
           </p>
-          <p className="text-xs mb-1 md:text-sm xl:text-lg 2xl:text-4xl">
-            you can also see it on my Github page
+          <p className="text-xs mb-1 md:text-sm">
+           { `// you can also see it on my Github page`}
           </p>
-          <p className="text-xs md:text-sm  xl:text-lg 2xl:text-4xl">
+          <p className="text-xs md:text-sm ">
             <span className="text-[#4D5BCE]">const</span>{" "}
             <span className="text-green-400">githubLink</span> = &quot;
             <a href="https://github.com/shakvilla" className="text-[#E99287]">

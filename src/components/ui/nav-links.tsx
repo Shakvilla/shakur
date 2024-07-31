@@ -17,8 +17,8 @@ const NavLink: React.FC<NavLinkProps> = ({
   return (
     <Link
       href={href}
-      className={`text-gray-400 py-3 hover:text-white px-4 border-b lg:border-r border-gray-700 ${
-        isActive ? "border-b-2 text-white border-b-[#FEA55F]" : "lg:border-b-0"
+      className={`text-[#607B96]  xl:h-full xl:flex xl:items-center hover:text-white hover:bg-gray-800 px-4 border-b lg:border-r border-gray-700 ${
+        isActive ? "border-b-1 text-white border-b-[#FEA55F]" : "lg:border-b-0"
       } ${additionalClasses}`}
     >
       {label}
