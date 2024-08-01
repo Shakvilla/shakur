@@ -28,18 +28,18 @@ const Navbar: React.FC = () => {
   ];
   return (
     // <header className="w-full flex flex-col">
-    <nav className="flex text-[#607B96] xl:text-[13px] xl:h-[45px] flex-wrap lg:flex-nowrap justify-between border-b border-b-gray-700">
-      <div className="flex w-full ">
+    <nav className="flex text-[#607B96] lg:text-[13px] lg:h-[45px] flex-wrap lg:flex-nowrap justify-between border-b border-b-gray-700">
+      <div className="flex w-full justify-between ">
         <a
           href="/"
-          className="2xl:px-8 px-6 hover:text-white hover:bg-gray-800 lg:h-full xl:flex xl:items-center xl:min-w-[275px] xl:max-w-[275px] 2xl:min-w-[310px] 2xl:max-w-[310px] lg:border-r border-gray-700"
+          className="2xl:px-8 px-6 hover:text-white hover:bg-gray-800 lg:h-full flex items-center lg:min-w-[275px] lg:max-w-[275px] 2xl:min-w-[310px] 2xl:max-w-[310px] lg:border-r border-gray-700"
         >
           abdul-shekur-a-clement
         </a>
-        <div className="block lg:hidden">
+        <div className="block justify-end  p-2 lg:hidden">
           <button
             onClick={toggleMenu}
-            className="focus:outline-none bg-transparent border border-gray-700"
+            className="focus:outline-none focus:bg-transparent bg-transparent"
           >
             {menuOpen ? <RiCloseLine size={20} /> : <RiMenu3Line size={20} />}
           </button>
@@ -48,20 +48,17 @@ const Navbar: React.FC = () => {
         <div
           className={`lg:justify-between lg:flex-row lg:flex  lg:items-center ${
             menuOpen
-              ? "flex absolute border-gray-700 rounded-b-lg h-screen w-11/12 top-0 bg-[#011627] z-50 flex-col"
+              ? "flex absolute top-[70px] bg-[#011627] z-50 flex-col"
               : "hidden"
-          }   h-full lg:relative top-16 left-0 lg:top-0 w-full lg:w-auto bg-[#011627] lg:bg-transparent  border-gray-700  p-0 `}
+          }   h-full w-full mx-0 lg:relative  lg:left-0 lg:top-0  lg:w-auto bg-[#011627] lg:bg-transparent  border-gray-700  lg:p-0 `}
         >
-          {/* <NavLink href="/" label="_hello" />
-          <NavLink href="/about_me" label="_about_me" />
-          <NavLink href="/projects" label="_projects" />
-         */}
+         
           {navigation.map((nav) => (
-            <div key={nav.id} className="h-full relative">
+            <div key={nav.id} className="lg:h-full py-4 relative border-b border-gray-700">
               <NavLink href={nav.url} label={nav.label} />
             </div>
           ))}
-          <div className="lg:hidden">
+          <div className="lg:hidden py-4 border-b border-gray-700">
             <NavLink
               href="/contact_me"
               label="_contact_me"

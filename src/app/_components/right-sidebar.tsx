@@ -7,15 +7,9 @@ const RightSidebar = () => {
   return str.toLowerCase();
 }
 `;
-  const code2 = `const instance: ReturnType<typeof axios.create> = axios.create({
-  baseURL: baseUrl,
-    headers: {
-      'Content-Type': 'application/json',
-      Accept: 'application/json',
-      gatewaytoken
-    },
-     withCredentials: true
-});
+  const code2 = `export const toUpperCase = (str: string): string => {
+  return str ? str.toUpperCase() : str;
+};
 `;
   return (
     <section className="w-full xl:w-2/5 text-sm border-l border-[#1E2D3D]">
