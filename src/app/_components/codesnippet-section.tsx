@@ -21,7 +21,7 @@ const CodeSnippetSection: React.FC<ICodeSnippetSectionProps> = ({
           alt="shakur"
           width="32"
           height="32"
-          className="h-8 w-8 rounded-full"
+          className="h-6 w-6 rounded-full"
         />
         <div className="text-sm">
           <Link
@@ -31,15 +31,15 @@ const CodeSnippetSection: React.FC<ICodeSnippetSectionProps> = ({
           >
             @shakvilla
           </Link>
-          <p className="text-[#607B96] text-xs xl:text-base">Created 5 months ago</p>
+          <p className="text-[#607B96] text-xs">Created 5 months ago</p>
         </div>
       </div>
       <div className="flex flex-col xl:flex-row gap-x-3 gap-y-1">
-        <div className="flex text-xs xl:text-base items-center text-[#607B96] gap-x-1">
+        <div className="flex text-xs items-center text-[#607B96] gap-x-1">
           <BiSolidMessageRounded />
-          <p className="text-white text-xs xl:text-base">details</p>
+          <p className="text-white text-xs ">details</p>
         </div>
-        <div className="flex items-center text-xs xl:text-base text-[#607B96] gap-x-1">
+        <div className="flex items-center text-xs text-[#607B96] gap-x-1">
           <FaStar />
           <p className="">3 stars</p>
         </div>

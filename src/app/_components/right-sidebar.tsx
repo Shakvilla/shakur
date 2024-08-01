@@ -3,14 +3,9 @@ import CodeSnippetSection from "./codesnippet-section";
 // import CodeSnippetSection from "../CodeSnippetSection";
 
 const RightSidebar = () => {
-  const code1 = `const initialize = (): void => {
-  config.cloudinaryConfig();
-  const app: Express = express();
-  databaseConnection();
-  start(app);
-  
-};
-initialize();
+  const code1 = `export function lowerCase(str: string): string {
+  return str.toLowerCase();
+}
 `;
   const code2 = `const instance: ReturnType<typeof axios.create> = axios.create({
   baseURL: baseUrl,
@@ -23,9 +18,9 @@ initialize();
 });
 `;
   return (
-    <section className="w-full xl:w-5/12 border-l border-[#1E2D3D]">
-      <div className="flex justify-center xl:justify-start py-2 items-center border-y border-gray-700">
-        <p className="text-[#607B96] pl-6">Code snippet showcase:</p>
+    <section className="w-full xl:w-2/5 text-sm border-l border-[#1E2D3D]">
+      <div className="flex justify-center xl:justify-start py-2.5 items-center border-y border-gray-700">
+        <p className="text-[#607B96] pl-6">code-snippet-showcase:</p>
       </div>
       <div className="relative lg:mx-6 p-3">
         <CodeSnippetSection code={code1} language="typescript" />

@@ -98,31 +98,31 @@ I have 5 years of experience in web development lorem ipsum dolor sit amet, cons
           </div>
 
           <div>
-            <pre className=" hidden xl:block text-[#607B96] text-start">
+            <pre className=" hidden xl:block text-sm text-[#607B96] text-start">
               {`
-  /**
-  * About Me
-  * 
-  * I am a Fullstack Engineer with extensive 
-  * experience in creating intuitive web applications 
-  * using NodeJs, ReactJs, ExpressJs, MongoDB,  
-  * and MySQL. My projects focus on delivering, 
-  * high-quality responsive, and dynamic 
-  * user experiences.
-  * 
-  * I excel in agile environments, collaborating with 
-  * cross-functional teams to achieve goals. 
-  * My strong communication skills ensure effective 
-  * stakeholder engagement and project success. 
-  * I am committed to continuous learning and 
-  * staying updated with the latest technologies.
-  * 
-  * I am passionate about delivering value through 
-  * technology and am excited to contribute 
-  * to a forward-thinking team. 
-  * Please feel free to reach out for further 
-  * information or to schedule an interview.
-  */`}
+   1    /**
+   2    * About Me
+   3    * 
+   4    * I am a Fullstack Engineer with extensive 
+   5    * experience in creating intuitive web applications 
+   6    * using NodeJs, ReactJs, ExpressJs, MongoDB,  
+   7    * and MySQL. My projects focus on delivering, 
+   8    * high-quality responsive, and dynamic 
+   9    * user experiences.
+   10   * 
+   11   * I excel in agile environments, collaborating with 
+   12   * cross-functional teams to achieve goals. 
+   13   * My strong communication skills ensure effective 
+   14   * stakeholder engagement and project success. 
+   15   * I am committed to continuous learning and 
+   16   * staying updated with the latest technologies.
+   17   * 
+   18   * I am passionate about delivering value through 
+   19   * technology and am excited to contribute 
+   20   * to a forward-thinking team. 
+   21   * Please feel free to reach out for further 
+   22   * information or to schedule an interview.
+   23   */`}
             </pre>
 
             <pre className="my-4 text-[0.5rem] tracking-wider  xl:hidden text-[#607B96] text-start">
