@@ -31,6 +31,7 @@ const slugs = [
   "figma",
 ];
   return (
+    // WIP: Responsiveness to be fixed later
     <div className=" flex flex-col bg-[#011627] text-white relative">
       <section className="w-full relative h-full">
         <div className="px-4 flex justify-start items-center text-[#607B96] border-y border-gray-700">
