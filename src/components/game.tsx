@@ -166,41 +166,121 @@ const Game: React.FC = () => {
     }
   };
 
-  useEffect(() => {
-    if (canvasRef.current) {
-      const canvas = canvasRef.current;
-      const context = canvas.getContext("2d");
-      if (context) {
-        context.clearRect(0, 0, canvas.width, canvas.height);
-        if (snake.length > 0) {
-          for (let i = 0; i < snake.length; i++) {
-            const opacity = 1 - i / snake.length;
-            context.fillStyle = `rgba(67, 217, 173, ${opacity})`;
-            context.fillRect(snake[i].x, snake[i].y, 10, 10);
+useEffect(() => {
+  if (canvasRef.current) {
+    const canvas = canvasRef.current;
+    const context = canvas.getContext("2d");
+    if (context) {
+      context.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Draw the snake
+      if (snake.length > 0) {
+        const gradient = context.createLinearGradient(
+          snake[0].x,
+          snake[0].y,
+          snake[snake.length - 1].x,
+          snake[snake.length - 1].y
+        );
+        gradient.addColorStop(1, "rgba(67, 217, 173, 1)"); // Head color
+        gradient.addColorStop(0, "rgba(67, 217, 173, 0.2)"); // Tail color
+
+        snake.forEach((segment, index) => {
+          context.fillStyle = gradient;
+          context.beginPath();
+
+          if (index === snake.length - 1) {
+            // Draw the head with dynamic rounded corners
+            if (direction === "UP") {
+              context.moveTo(segment.x, segment.y + 10);
+              context.arcTo(segment.x, segment.y, segment.x + 10, segment.y, 5);
+              context.arcTo(
+                segment.x + 10,
+                segment.y,
+                segment.x + 10,
+                segment.y + 10,
+                5
+              );
+              context.lineTo(segment.x, segment.y + 10);
+            } else if (direction === "DOWN") {
+              context.moveTo(segment.x, segment.y);
+              context.lineTo(segment.x + 10, segment.y);
+              context.lineTo(segment.x + 10, segment.y + 5);
+              context.arcTo(
+                segment.x + 10,
+                segment.y + 10,
+                segment.x + 5,
+                segment.y + 10,
+                5
+              );
+              context.arcTo(
+                segment.x,
+                segment.y + 10,
+                segment.x,
+                segment.y + 5,
+                5
+              );
+              context.lineTo(segment.x, segment.y);
+            } else if (direction === "LEFT") {
+              context.moveTo(segment.x + 10, segment.y);
+              context.arcTo(segment.x, segment.y, segment.x, segment.y + 10, 5);
+              context.arcTo(
+                segment.x,
+                segment.y + 10,
+                segment.x + 10,
+                segment.y + 10,
+                5
+              );
+              context.lineTo(segment.x + 10, segment.y);
+            } else if (direction === "RIGHT") {
+              context.moveTo(segment.x, segment.y);
+              context.lineTo(segment.x + 5, segment.y);
+              context.arcTo(
+                segment.x + 10,
+                segment.y,
+                segment.x + 10,
+                segment.y + 10,
+                5
+              );
+              context.arcTo(
+                segment.x + 10,
+                segment.y + 10,
+                segment.x,
+                segment.y + 10,
+                5
+              );
+              context.lineTo(segment.x, segment.y);
+            }
+          } else {
+            // Draw the body segments
+            context.fillRect(segment.x, segment.y, 10, 10);
           }
-        }
+          context.fill();
+        });
+      }
 
-        context.fillStyle = "rgba(67, 217, 173, 1)";
-        context.beginPath();
-        context.arc(food.x + 5, food.y + 5, 5, 0, Math.PI * 2);
-        context.fill();
+      // Draw the food
+      context.fillStyle = "rgba(67, 217, 173, 1)"; // Food color should match the snake's head
+      context.beginPath();
+      context.arc(food.x + 5, food.y + 5, 5, 0, Math.PI * 2);
+      context.fill();
 
-        if (gameOver) {
-          context.fillStyle = "white";
-          context.font = "20px Arial";
-          context.textAlign = "center";
-          context.fillText("Game Over!", canvas.width / 2, canvas.height / 2);
-        }
+      // Draw the game over or well done message
+      if (gameOver) {
+        context.fillStyle = "white";
+        context.font = "20px Arial";
+        context.textAlign = "center";
+        context.fillText("Game Over!", canvas.width / 2, canvas.height / 2);
+      }
 
-        if (wellDone) {
-          context.fillStyle = "lime";
-          context.font = "20px Arial";
-          context.textAlign = "center";
-          context.fillText("Well Done!", canvas.width / 2, canvas.height / 2);
-        }
+      if (wellDone) {
+        context.fillStyle = "lime";
+        context.font = "20px Arial";
+        context.textAlign = "center";
+        context.fillText("Well Done!", canvas.width / 2, canvas.height / 2);
       }
     }
-  }, [snake, food, gameOver, wellDone]);
+  }
+}, [snake, food, gameOver, wellDone, direction]);
 
   return (
     <div className="relative console bg-[#011627D6] p-4 rounded-lg mt-8 lg:flex-row h-full flex flex-col gap-4 lg:items-start items-center">
