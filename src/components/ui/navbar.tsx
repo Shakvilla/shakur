@@ -50,12 +50,12 @@ const Navbar: React.FC = () => {
             menuOpen
               ? "flex absolute top-[70px] bg-[#011627] height-95 z-50 flex-col"
               : "hidden"
-          }   w-11/12 mx-auto xl:mr-auto xl:ml-0 lg:relative   lg:left-0 lg:top-0  lg:w-auto bg-[#011627] lg:bg-transparent  border-gray-700  lg:p-0 `}
+          }   w-11/12 mx-auto lg:mr-auto lg:ml-0 lg:relative   lg:left-0 lg:top-0  lg:w-auto bg-[#011627] lg:bg-transparent  border-gray-700  lg:p-0 `}
         >
           {navigation.map((nav) => (
             <div
               key={nav.id}
-              className="lg:h-full py-4 xl:py-0 relative border-b lg:border-r border-gray-700"
+              className="lg:h-full py-4 lg:py-0 relative border-b lg:border-r border-gray-700"
             >
               <NavLink href={nav.url} label={nav.label} />
             </div>

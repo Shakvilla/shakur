@@ -73,10 +73,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${fira_code_retina.variable} ${fira_code.variable} border border-gray-700 rounded-md bg-[#011627] xl:fill-page`}
+        className={`${fira_code_retina.variable} ${fira_code.variable} border border-gray-700 rounded-md bg-[#011627] xl:h-screen`}
       >
         <Providers>
-          <div className="height-95 xl:h-full ">
+          <div className="height-95">
             <Navbar />
             {children}
             <Footer />
