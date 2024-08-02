@@ -21,8 +21,8 @@ body {
 html {
   
     @apply bg-dark-background;
-    height: stretch;
-    width: stretch;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
     
     margin: 30px;
 }
@@ -30,8 +30,8 @@ html {
 body {
     font-family: var(--font-fira_code_retina);
 
-    height: 100%;
-    width: 100%;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
     color: white;
 }
 h1,

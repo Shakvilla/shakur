@@ -8,7 +8,7 @@ export default function SidebarLayout({
   children: React.ReactNode;
 }) {
   return (
-    <section className="flex flex-col xl:flex-row ">
+    <section className="flex h-full flex-col xl:flex-row ">
       
       <LeftSidebar />
       <main className="relative h-full flex-1">
