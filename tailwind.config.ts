@@ -13,6 +13,9 @@ const config: Config = {
 
   theme: {
     extend: {
+      colors: {
+        "dark-background": "#010C15",
+      },
       fontFamily: {
         fira: ["var(--font-fira)"],
       },

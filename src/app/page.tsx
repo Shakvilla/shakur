@@ -2,12 +2,13 @@
 import { ReactTyped } from "react-typed";
 import { TbArrowBigRightLines } from "react-icons/tb";
 import Game from "@/components/game";
+import { FaChevronRight } from "react-icons/fa6";
 
 export default function Home() {
   return (
     <>
-    	<div className="css-blurry-gradient-blue"></div>
-    	<div className="css-blurry-gradient-green"></div>
+      <div className="css-blurry-gradient-blue"></div>
+      <div className="css-blurry-gradient-green"></div>
       <div className="flex h-full  flex-wrap justify-center items-center py-10 px-4 sm:py-16 sm:px-6 md:py-20 ">
         <section
           id=""
@@ -17,12 +18,10 @@ export default function Home() {
           <h1 className=" text-3xl sm:text-3xl font-normal xl:text-5xl  text-[#E5E9F0]">
             Abdul Shekur A Clement
           </h1>
-          <div className="flex  items-center gap-4 text-xs md:text-sm lg:text-lg 2xl:text-3xl tracking-widest text-[#4d5bce]  font-normal">
-            <div className="flex items-center gap-1  my-2">
-              <span>
-                {`_skills:`}
-              </span>
-              <TbArrowBigRightLines />
+          <div className="flex  items-center gap-4 text-base xl:text-xl 2xl:text-3xl tracking-widest text-[#43D9AD] xl:text-[#4d5bce]  font-normal">
+            <div className="flex items-center gap-1  my-2 xl:my-8">
+              {/* <span>{`_skills:`}</span> */}
+              <FaChevronRight />
             </div>
             <ReactTyped
               backSpeed={50}
@@ -37,13 +36,7 @@ export default function Home() {
               onTypingPaused={function noRefCheck() {}}
               onTypingResumed={function noRefCheck() {}}
               loop={true}
-              strings={[
-                "Frontend",
-                "Backend",
-                "UI/UX Design.",
-                "Systems Design.",
-                "Microservices.",
-              ]}
+              strings={["Fullstack Developer"]}
               typeSpeed={100}
               typedRef={function noRefCheck() {}}
             />
@@ -58,7 +51,10 @@ export default function Home() {
             <p className="text-xs ">
               <span className="text-[#4D5BCE]">const</span>{" "}
               <span className="text-green-400">githubLink</span> = &quot;
-              <a href="https://github.com/shakvilla" className="text-[#E99287] underline">
+              <a
+                href="https://github.com/shakvilla"
+                className="text-[#E99287] underline"
+              >
                 https://github.com/shakvilla
               </a>
               &quot;
@@ -68,9 +64,9 @@ export default function Home() {
 
         <section className="  relative w-full lg:w-1/2 md:flex justify-start items-center mt-8 md:mt-0">
           <div className="relative z-10 w-full h-full">
-            <div className="absolute w-[90%] max-w-[479.6px] h-[342.27px] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 custom-background-blur"></div>
+            {/* <div className="hidden md:block absolute w-[90%] max-w-[479.6px] h-[342.27px] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 custom-background-blur"></div> */}
 
-            <div className=" w-full max-w-[510px] 2xl:max-w-[910px] 2xl:max-h-[1200px] mx-auto rounded-lg">
+            <div className="  w-full max-w-[510px] 2xl:max-h-[1200px] mx-auto rounded-lg">
               <Game />
             </div>
           </div>

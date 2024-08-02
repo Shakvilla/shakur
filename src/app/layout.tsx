@@ -74,13 +74,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${fira_code_retina.variable} ${fira_code.variable}`}>
         <Providers>
-          <div className="absolute top-0 text-white p-4 flex items-center md:p-8 min-h-screen w-screen bg-[#010C15]  bg-[size:20px_20px] overflow-hidden">
-            <div className="  mx-auto  2xl:max-w-8xl     border border-gray-700 rounded-md bg-[#011627]">
+            <div className="height-95 xl:h-full border border-gray-700 rounded-md bg-[#011627]">
               <Navbar />
               {children}
               <Footer />
             </div>
-          </div>
         </Providers>
       </body>
     </html>

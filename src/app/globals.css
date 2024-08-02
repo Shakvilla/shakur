@@ -6,16 +6,34 @@
 /* globals.css */
 
 
-html,
+/* html,
 body {
   font-family: var(--font-fira_code_retina);
   overflow-x: hidden;
-  height: stretch;
-    width: stretch;
-    /* margin: 30px; */
+  height: stretch !important;
+    width: stretch !important;
+    margin: 30px;
 
+    @apply bg-dark-background
+
+} */
+
+html {
+  
+    @apply bg-dark-background;
+    height: stretch;
+    width: stretch;
+    
+    margin: 30px;
 }
 
+body {
+    font-family: var(--font-fira_code_retina);
+
+    height: 100%;
+    width: 100%;
+    color: white;
+}
 h1,
 h2,
 h3,
@@ -24,9 +42,9 @@ h5,
 h6 {
   font-family: var(--font-fira_code);
 }
-body {
+/* body {
   @apply bg-gray-900 text-white;
-}
+} */
 
 button {
   @apply bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded;
@@ -102,6 +120,10 @@ button {
   overflow-x: auto;
   font-family: 'Courier New', Courier, monospace;
   font-size: 12px;
+}
+
+.height-95{
+  height: 90%;
 }
 
 .code-keyword {

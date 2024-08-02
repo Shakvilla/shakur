@@ -46,15 +46,17 @@ const Navbar: React.FC = () => {
         </div>
 
         <div
-          className={`lg:justify-between lg:flex-row lg:flex  lg:items-center ${
+          className={` lg:flex-row lg:flex  lg:items-center ${
             menuOpen
-              ? "flex absolute top-[70px] bg-[#011627] z-50 flex-col"
+              ? "flex absolute top-[70px] bg-[#011627] height-95 z-50 flex-col"
               : "hidden"
-          }   h-full w-full mx-0 lg:relative  lg:left-0 lg:top-0  lg:w-auto bg-[#011627] lg:bg-transparent  border-gray-700  lg:p-0 `}
+          }   w-11/12 mx-auto xl:mr-auto xl:ml-0 lg:relative   lg:left-0 lg:top-0  lg:w-auto bg-[#011627] lg:bg-transparent  border-gray-700  lg:p-0 `}
         >
-         
           {navigation.map((nav) => (
-            <div key={nav.id} className="lg:h-full py-4 relative border-b border-gray-700">
+            <div
+              key={nav.id}
+              className="lg:h-full py-4 xl:py-0 relative border-b lg:border-r border-gray-700"
+            >
               <NavLink href={nav.url} label={nav.label} />
             </div>
           ))}
@@ -68,11 +70,11 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      <div className="hidden lg:flex justify-end">
+      <div className="hidden lg:flex justify-end ">
         <NavLink
           href="/contact_me"
           label="_contact_me"
-          additionalClasses="border-l  pl-4"
+          additionalClasses="border-l  pl-4 border-gray-700"
         />
       </div>
     </nav>
