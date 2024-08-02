@@ -5,7 +5,7 @@ import { MdClose } from "react-icons/md";
 const PersonalInfo: React.FC = () => {
 
   return (
-    <div className="xl:min-h-screen flex flex-col bg-[#011627] text-white">
+    <div className=" flex flex-col bg-[#011627] text-white">
       {/* <main className="lg:hidden flex flex-1 flex-col lg:flex-row w-full px-4 sm:px-6 md:px-0 mx-auto">
         <div className="flex lg:hidden justify-between items-center bg-[#011627] p-4 border-b border-gray-700">
           <p className="text-2xl text-[#607B96]">personal-info</p>

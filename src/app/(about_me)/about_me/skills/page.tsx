@@ -34,8 +34,8 @@ const slugs = [
     <div className="min-h-screen flex flex-col bg-[#011627] text-white relative">
       <section className="w-full relative">
         <div className="px-4 flex justify-start items-center text-[#607B96] border-y border-gray-700">
-          <div className="flex pr-2 justify-between items-center xl:w-4/12 border-r border-gray-700 py-2">
-            <p>my-skills</p>
+          <div className="flex  gap-x-2 text-sm pr-2 justify-between items-center xl:w-4/12 border-r border-gray-700 py-2.5">
+            <p className="">my-skills</p>
             <MdClose />
           </div>
         </div>

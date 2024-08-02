@@ -45,7 +45,7 @@ const CodeSnippetSection: React.FC<ICodeSnippetSectionProps> = ({
         </div>
       </div>
     </div>
-    <div className="mt-2 bg-[#011221] border border-[#1E2D3D] p-4 rounded-md">
+    <div className="mt-2 bg-[#011221] text-[#607B96] border border-[#1E2D3D] p-4 rounded-md">
       <CodeSnippet code={code} language={language} />
     </div>
   </div>
