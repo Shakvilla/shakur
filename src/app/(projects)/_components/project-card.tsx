@@ -14,6 +14,9 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
 
       <div className=" bg-[#011221] border border-[#1E2D3D] rounded-lg mt-2">
         <div className="w-full h-24  rounded-t-md  bg-gray-800">
+         <div>
+          
+         </div>
           <Image
             src={imageUrl}
             alt={title}
