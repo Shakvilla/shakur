@@ -13,10 +13,8 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
       <h3 className="text-sm text-[#4D5BCE]">{title}</h3>
 
       <div className=" bg-[#011221] border border-[#1E2D3D] rounded-lg mt-2">
-        <div className="w-full h-24  rounded-t-md  bg-gray-800">
-         <div>
-          
-         </div>
+        <div className="w-full h-28  rounded-t-md  bg-gray-800">
+          <div></div>
           <Image
             src={imageUrl}
             alt={title}
@@ -31,7 +29,7 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
               <p className="text-sm " key={index}>{`${t},`}</p>
             ))}
           </div>
-          <button className="bg-[#FEA55F] px-2 py-1 rounded font-normal text-sm text-[#01080E] mt-2">
+          <button className="bg-[#1c2b3a] px-2 py-1 rounded font-normal text-sm text-white mt-2">
             view-project
           </button>
         </div>
