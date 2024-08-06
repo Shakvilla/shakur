@@ -7,18 +7,21 @@ import projectImage from "../../../../public/images/thumnail.png"
 
 const projects = [
   {
+    id: 0,
     title: "Project 1 // _ui-animations",
     description: "Duis aute irure dolor in velit esse cillum dolore.",
     imageUrl: projectImage,
     techStacks: ["React", "CSS", "Angular"],
   },
   {
+    id: 1,
     title: "Project 2 // _tetris-game",
     description: "Duis aute irure dolor in velit esse cillum dolore.",
-    imageUrl:projectImage,
+    imageUrl: projectImage,
     techStacks: ["React", "JavaScript", "Flutter"],
   },
   {
+    id: 2,
     title: "Project 3 // _ethereum",
     description: "Duis aute irure dolor in velit esse cillum dolore.",
     imageUrl:projectImage,    
@@ -50,18 +53,18 @@ export default function ProjectsPage() {
           selectedStacks={selectedStacks}
           setSelectedStacks={setSelectedStacks}
         />
-        <main className="w-full lg:w-10/12 ">
-          <div className="flex justify-between items-center border-b border-gray-700 p-3">
-            <h2 className="text-lg text-[#607B96]">
+        <main className="w-full  ">
+          <div className="flex justify-between items-center border-b border-gray-700 px-4 py-2">
+            <h2 className="text-xs text-[#607B96]">
               {selectedStacks.length === 0
-                ? "All Projects"
+                ? "all-projects"
                 : selectedStacks.join("; ")}
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 px-8">
-            {filteredProjects.map((project, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-x-8 gap-y-4 px-16 py-4">
+            {filteredProjects.map((project) => (
               <ProjectCard
-                key={index}
+                key={project.id}
                 title={project.title}
                 description={project.description}
                 imageUrl={project.imageUrl}

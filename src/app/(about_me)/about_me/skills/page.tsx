@@ -45,7 +45,7 @@ const slugs = [
           <TypewriterEffectSmoothDemo />
         </div>
 
-        <div className="relative flex h-full w-full xl:max-w-[32rem] 2xl:max-w-full items-center justify-center overflow-hidden rounded-lg   px-20 pb-20 pt-8 ">
+        <div className="relative flex  w-full lg:max-w-[32rem] 2xl:max-w-full items-center justify-center overflow-hidden rounded-lg   px-20 pb-20 pt-8 ">
           <IconCloud iconSlugs={slugs} />
         </div>
 

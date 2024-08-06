@@ -62,7 +62,7 @@ const fira_code = localFont({
 
 export const metadata: Metadata = {
   title: "Abdul Shekur  A Clement",
-  description: "Developer portfolio",
+  description: "Abdul Shekur A Clement | Developer portfolio",
 };
 
 export default function RootLayout({
@@ -73,10 +73,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${fira_code_retina.variable} ${fira_code.variable} border border-gray-700 rounded-md bg-[#011627] xl:h-screen`}
+        className={`${fira_code_retina.variable} ${fira_code.variable} border border-gray-700 rounded-md bg-[#011627] 2xl:h-screen`}
       >
         <Providers>
-          <div className="height-95">
+          <div className=" h-full">
             <Navbar />
             {children}
             <Footer />

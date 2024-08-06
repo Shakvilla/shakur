@@ -20,11 +20,11 @@ body {
 
 html {
   
-    @apply bg-dark-background;
+    @apply bg-dark-background md:p-4 p-2 xl:p-8 ;
     height: -webkit-fill-available;
     width: -webkit-fill-available;
     
-    margin: 30px;
+    /* padding: 30px; */
 }
 
 body {

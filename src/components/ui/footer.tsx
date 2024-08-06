@@ -4,7 +4,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="  flex  flex-wrap md:justify-between items-center px-4 sm:px-6 md:px-8 bg-transparent border-t border-gray-800">
+    <footer className=" relative flex  flex-wrap md:justify-between items-center px-4 sm:px-6 md:px-8 bg-transparent border-t border-gray-800">
       <div className="flex space-x-2 md:space-x-4 items-center">
         <p className="text-xs md:text-sm text-gray-300 border-r border-gray-700 px-4 py-2">
           find me in:
