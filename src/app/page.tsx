@@ -14,12 +14,12 @@ export default function Home() {
           id=""
           className="w-full lg:w-1/2 xl:pl-[275px] 2xl:pl-[310px] xl:px-8"
         >
-          <p className="2xl:text-lg text-[#E5E9F0] my-4">Hi all. I am</p>
-          <h1 className=" text-3xl sm:text-3xl font-normal xl:text-5xl  text-[#E5E9F0]">
+          <p className="2xl:text-lg text-[#E5E9F0] my-4 ">Hi all. I am</p>
+          <h1 className=" text-3xl sm:text-3xl font-normal xl:text-5xl  2xl:text-8xl text-[#E5E9F0]">
             Abdul Shekur A Clement
           </h1>
           <div className="flex  items-center gap-4 text-base xl:text-xl 2xl:text-3xl tracking-widest text-[#43D9AD] xl:text-[#4d5bce]  font-normal">
-            <div className="flex items-center gap-1  my-2 xl:my-8">
+            <div className="flex items-center gap-1  my-2 xl:my-8 2xl:text-xl">
               {/* <span>{`_skills:`}</span> */}
               <FaChevronRight />
             </div>
@@ -66,7 +66,7 @@ export default function Home() {
           <div className="relative z-10 w-full h-full">
             {/* <div className="hidden md:block absolute w-[90%] max-w-[479.6px] h-[342.27px] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 custom-background-blur"></div> */}
 
-            <div className="  w-full max-w-[510px] 2xl:max-h-[1200px] mx-auto rounded-lg">
+            <div className="  w-full max-w-[510px] 2xl:max-w-[810px] 2xl:max-h-[1400px] mx-auto rounded-lg">
               <Game />
             </div>
           </div>
