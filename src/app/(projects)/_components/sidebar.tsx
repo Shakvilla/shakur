@@ -80,13 +80,7 @@ const Sidebar: React.FC<ISidebarProps> = ({
         <div className="mt-4 px-4">
           {techStacks.map((stack) => (
             <div key={stack} className="flex items-center mt-2">
-              {/* <input
-                type="checkbox"
-                checked={selectedStacks.includes(stack)}
-                onChange={() => toggleStack(stack)}
-                className="mr-2 h-4 w-4 text-gray-800"
-                id={stack}
-              /> */}
+            
               <Checkbox
                 checked={selectedStacks.includes(stack)}
                 onCheckedChange={() => toggleStack(stack)}
