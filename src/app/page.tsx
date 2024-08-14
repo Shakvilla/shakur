@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <div className="css-blurry-gradient-blue"></div>
       <div className="css-blurry-gradient-green"></div>
-      <div className="flex h-full  flex-wrap justify-center items-center py-10 px-4 sm:py-16 sm:px-6 md:py-20 ">
+      <div className="flex h-screen  flex-wrap justify-center items-center py-10 px-4 sm:py-16 sm:px-6 md:py-20 ">
         <section
           id=""
           className="w-full lg:w-1/2 xl:pl-[275px] 2xl:pl-[310px] xl:px-8"

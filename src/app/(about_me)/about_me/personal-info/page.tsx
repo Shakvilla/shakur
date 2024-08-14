@@ -97,7 +97,7 @@ I have 5 years of experience in web development lorem ipsum dolor sit amet, cons
             </div>
           </div>
 
-          <div>
+          <div className="">
             <pre className=" hidden xl:block text-sm text-[#607B96] text-start">
               {`
    1    /**

@@ -11,7 +11,7 @@ export default function SidebarLayout({
     <section className="flex h-full flex-col xl:flex-row ">
       
       <LeftSidebar />
-      <main className="relative h-full flex-1">
+      <main className="relative h-screen flex-1">
        
 
         {children}

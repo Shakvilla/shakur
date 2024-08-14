@@ -1,3 +1,4 @@
+import { Checkbox } from "@/components/ui/checkbox";
 import { ISidebarProps } from "@/interfaces/sidebar";
 import { MdArrowDropDown } from "react-icons/md";
 
@@ -79,13 +80,22 @@ const Sidebar: React.FC<ISidebarProps> = ({
         <div className="mt-4 px-4">
           {techStacks.map((stack) => (
             <div key={stack} className="flex items-center mt-2">
-              <input
+              {/* <input
                 type="checkbox"
                 checked={selectedStacks.includes(stack)}
                 onChange={() => toggleStack(stack)}
-                className="mr-2"
-              />
-              <label className="text-[#607B96]">{stack}</label>
+                className="mr-2 h-4 w-4 text-gray-800"
+                id={stack}
+              /> */}
+              <Checkbox
+                checked={selectedStacks.includes(stack)}
+                onCheckedChange={() => toggleStack(stack)}
+                className="mr-2 h-4 w-4 "
+                id={stack}
+
+             
+                />            
+              <label className="text-[#607B96]" htmlFor={stack}>{stack}</label>
             </div>
           ))}
         </div>

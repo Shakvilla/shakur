@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
         </a>
         <a
           href="https://github.com/shakvilla"
-          className="flex items-center gap-2 py-2 text-gray-400 hover:text-white border-gray-700 md:px-4"
+          className="xl:hidden flex items-center gap-2 py-2 text-gray-400 hover:text-white border-gray-700 md:px-4"
           target="_blank"
           rel="noopener noreferrer"
         >
