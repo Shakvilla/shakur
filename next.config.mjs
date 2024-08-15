@@ -4,9 +4,9 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'assets.aceternity.com',
+                hostname: 'res.cloudinary.com',
                 port: '',
-                pathname: '/demos/**',
+                pathname: '/dhpa3wn8r/image/upload/**',
             },
         ],
     },

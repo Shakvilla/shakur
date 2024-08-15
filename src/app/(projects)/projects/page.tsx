@@ -8,10 +8,12 @@ import projectImage from "../../../../public/images/thumnail.png"
 const projects = [
   {
     id: 0,
-    title: "Wigal Website // _web",
-    description:
-      "The Best Technology Company with In-depth understanding of State of the art technology",
-    imageUrl: projectImage,
+    title: "Wigal Website //_landing-page",
+    ctaText: "_visit",
+    ctaLink: "https://wigal.com.gh",
+    description: "The Best Technology Company with In-depth understanding.",
+    imageUrl:
+      "https://res.cloudinary.com/dhpa3wn8r/image/upload/v1723751365/Screenshot_2024-08-15_at_4.28.30_PM_ugusy7.png",
     techStacks: ["React", "TailwindCss", "NextJs", "Javascript"],
     content: () => {
       return <p>Description about this project</p>;

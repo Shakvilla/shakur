@@ -68,7 +68,7 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
                   duration: 0.05,
                 },
               }}
-              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6"
+              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-[] rounded-full h-6 w-6"
               onClick={() => setActive(null)}
             >
               <CloseIcon />
@@ -76,14 +76,14 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+              className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col  bg-[#011221] border border-[#1E2D3D] rounded-lg overflow-hidden"
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
                 <Image
                   priority
                   width={200}
                   height={200}
-                  src={active.src}
+                  src={active.imageUrl}
                   alt={active.title}
                   className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
                 />
@@ -94,16 +94,17 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
                   <div className="">
                     <motion.h3
                       layoutId={`title-${active?.title}-${id}`}
-                      className="font-medium text-neutral-700 dark:text-neutral-200 text-base"
+                      className="font-medium text-[#607B96]  text-base"
                     >
                       {active?.title}
                     </motion.h3>
-                    <motion.p
-                      layoutId={`description-${active?.description}-${id}`}
-                      className="text-neutral-600 dark:text-neutral-400 text-base"
-                    >
-                      {active?.description}
-                    </motion.p>
+                  
+                      <motion.p
+                        layoutId={`description-${active?.description}-${id}`}
+                        className="text-[#607B96]  text-xs my-2 	"
+                      >
+                        {active?.description}
+                      </motion.p>
                   </div>
 
                   <motion.a
@@ -113,7 +114,7 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
                     exit={{ opacity: 0 }}
                     href={active?.ctaLink}
                     target="_blank"
-                    className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
+                    className="bg-[#1c2b3a] px-2 py-1 rounded font-normal text-sm text-white mt-2"
                   >
                     {active?.ctaText}
                   </motion.a>
@@ -149,13 +150,14 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
           {/* <div className="w-full h-28  rounded-t-md  bg-gray-800"> */}
           <motion.div
             layoutId={`image-${title}-${id}`}
-            className="w-full h-28  rounded-t-md  bg-gray-800"
+            className=" relative w-full h-32  rounded-t-md  bg-gray-800"
           >
             <div></div>
 
             <Image
-              // width={200}
-              // height={100}
+              fill
+              // width={0}
+              // height={0}
               src={imageUrl}
               alt={title}
               className=" h-full w-full  object-cover object-top rounded-t-md"
@@ -169,19 +171,24 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
           {/* </div> */}
 
           <div className="mt-4 p-4">
-            <motion.article>
               <motion.p
-              layoutId={`description-${description}-${id}`}
-              className="text-xs text-[#607B96] mt-2"
-            >
-              {description}
-            </motion.p>
-            </motion.article>
-            
+                layoutId={`description-${description}-${id}`}
+                className="text-xs text-[#607B96] mb-2"
+              >
+                {description}
+              </motion.p>
+
             {/* <p className="text-xs text-[#607B96] mt-2">{description}</p> */}
-            <motion.article layoutId={`techStacks-${techStacks}-${id}`} className="flex gap-1 my-2 text-[#607B96] overflow-x-auto">
+            <motion.article
+              layoutId={`techStacks-${techStacks}-${id}`}
+              className="flex gap-1 justify-start my-1 text-[#607B96] overflow-x-auto"
+            >
               {techStacks.map((t, index) => (
-                <motion.p layoutId={`techStack-${t}`} className="text-sm " key={index}>{`${t},`}</motion.p>
+                <motion.p
+                  layoutId={`techStack-${t}`}
+                  className="text-xs "
+                  key={index}
+                >{`${t},`}</motion.p>
               ))}
             </motion.article>
             <button
