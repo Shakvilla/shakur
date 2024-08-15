@@ -8,10 +8,14 @@ import projectImage from "../../../../public/images/thumnail.png"
 const projects = [
   {
     id: 0,
-    title: "Project 1 // _ui-animations",
-    description: "Duis aute irure dolor in velit esse cillum dolore.",
+    title: "Wigal Website // _web",
+    description:
+      "The Best Technology Company with In-depth understanding of State of the art technology",
     imageUrl: projectImage,
-    techStacks: ["React", "CSS", "Angular"],
+    techStacks: ["React", "TailwindCss", "NextJs", "Javascript"],
+    content: () => {
+      return <p>Description about this project</p>;
+    },
   },
   {
     id: 1,
@@ -19,13 +23,19 @@ const projects = [
     description: "Duis aute irure dolor in velit esse cillum dolore.",
     imageUrl: projectImage,
     techStacks: ["React", "JavaScript", "Flutter"],
+    content: () => {
+      return <p>Description about this project</p>;
+    },
   },
   {
     id: 2,
     title: "Project 3 // _ethereum",
     description: "Duis aute irure dolor in velit esse cillum dolore.",
-    imageUrl:projectImage,    
+    imageUrl: projectImage,
     techStacks: ["Vue", "JavaScript", "HTML", "Gatsby"],
+    content: () => {
+      return <p>Description about this project</p>;
+    },
   },
   // Add more projects as needed
 ];
@@ -54,16 +64,18 @@ export default function ProjectsPage() {
           setSelectedStacks={setSelectedStacks}
         />
         <main className="w-full  ">
-          <div className="flex justify-between items-center border-b border-gray-700 px-4 py-2">
+          <div className="flex justify-between items-center border-b border-gray-700 xl:px-8 py-2">
             <h2 className="text-xs text-[#607B96]">
               {selectedStacks.length === 0
                 ? "all-projects"
                 : selectedStacks.join("; ")}
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-x-8 gap-y-4 px-16 py-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-x-8 gap-y-4 px-4 xl:px-8 py-4">
             {filteredProjects.map((project) => (
               <ProjectCard
+               projects= {projects}
+                project={project}
                 key={project.id}
                 title={project.title}
                 description={project.description}
@@ -72,6 +84,7 @@ export default function ProjectsPage() {
               />
             ))}
           </div>
+          {/* <ExpandableCardDemo /> */}
         </main>
       </div>
     </div>
