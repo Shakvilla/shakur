@@ -68,7 +68,7 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
                   duration: 0.05,
                 },
               }}
-              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-[] rounded-full h-6 w-6"
+              className="flex absolute top-2 right-2 lg:hidden items-center justify-center  rounded-full h-6 w-6"
               onClick={() => setActive(null)}
             >
               <CloseIcon />
@@ -145,10 +145,10 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
           {title}
         </motion.h3>
 
-        <div className=" bg-[#011221] border border-[#1E2D3D] rounded-lg mt-2">
+        <div className=" bg-[#011221] border border-[#1E2D3D] rounded-xl mt-2">
           <motion.div
             layoutId={`image-${title}-${id}`}
-            className=" relative w-full h-32  rounded-t-md  bg-gray-800"
+            className=" relative w-full h-32  rounded-t-lg  bg-gray-800"
           >
            
 
@@ -157,7 +157,7 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
               
               src={imageUrl}
               alt={title}
-              className=" h-full w-full brightness-25 object-cover object-top rounded-t-md"
+              className=" h-full w-full brightness-50 object-cover object-top rounded-t-lg"
             />
           </motion.div>
           <div className="mt-4 p-4">
