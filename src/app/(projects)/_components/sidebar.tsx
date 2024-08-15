@@ -24,7 +24,7 @@ const Sidebar: React.FC<ISidebarProps> = ({
   };
 
   return (
-    <aside className="w-full flex xl:min-w-[275px] 2xl:max-w-[310px] 2xl:min-w-[310px] xl:max-w-[275px]">
+    <aside className="w-full flex  xl:min-w-[275px] 2xl:max-w-[310px] 2xl:min-w-[310px] xl:max-w-[275px]">
       <div className="hidden xl:block  text-sm text-[#607B96] xl:w-full border-r border-gray-700 h-full">
         <div className=" flex pb-2 pl-2 justify-start items-center text-white border-b border-gray-700">
           <div className="text-2xl">

@@ -16,7 +16,19 @@ const projects = [
       "https://res.cloudinary.com/dhpa3wn8r/image/upload/v1723751365/Screenshot_2024-08-15_at_4.28.30_PM_ugusy7.png",
     techStacks: ["React", "TailwindCss", "NextJs", "Javascript"],
     content: () => {
-      return <p>Description about this project</p>;
+      return (
+        <>
+          <p>
+            As the Lead UI/UX Designer and Frontend Developer, I led the design
+            and development of the main website for a Ghana-based technology
+            firm. The site effectively markets the company’s SaaS products and
+            software solutions, contributing to a significant revenue increase
+            over the past three years. My role involved creating a user-friendly
+            interface, developing a responsive frontend, and ensuring the site’s
+            alignment with the company’s branding and goals.
+          </p>
+        </>
+      );
     },
   },
   {
@@ -60,20 +72,20 @@ export default function ProjectsPage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-[#011627] text-white">
-      <div className="flex flex-1   mx-auto">
+      <div className="flex flex-col xl:flex-row xl:flex-1   mx-auto">
         <Sidebar
           selectedStacks={selectedStacks}
           setSelectedStacks={setSelectedStacks}
         />
         <main className="w-full  ">
-          <div className="flex justify-between items-center border-b border-gray-700 xl:px-8 py-2">
+          <div className="flex justify-between items-center border-b border-gray-700 px-4 xl:px-8 py-2">
             <h2 className="text-xs text-[#607B96]">
               {selectedStacks.length === 0
                 ? "all-projects"
                 : selectedStacks.join("; ")}
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-x-8 gap-y-4 px-4 xl:px-8 py-4">
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-x-8 gap-y-4 pr-4 xl:px-8 py-4">
             {filteredProjects.map((project) => (
               <ProjectCard
                projects= {projects}
@@ -86,7 +98,6 @@ export default function ProjectsPage() {
               />
             ))}
           </div>
-          {/* <ExpandableCardDemo /> */}
         </main>
       </div>
     </div>

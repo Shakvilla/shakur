@@ -13,6 +13,10 @@ const config: Config = {
 
   theme: {
     extend: {
+        brightness: {
+        25: '.25',
+        175: '1.75',
+      },
       colors: {
         "dark-background": "#010C15",
       },

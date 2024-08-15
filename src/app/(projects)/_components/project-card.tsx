@@ -98,13 +98,13 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
                     >
                       {active?.title}
                     </motion.h3>
-                  
-                      <motion.p
-                        layoutId={`description-${active?.description}-${id}`}
-                        className="text-[#607B96]  text-xs my-2 	"
-                      >
-                        {active?.description}
-                      </motion.p>
+
+                    <motion.p
+                      layoutId={`description-${active?.description}-${id}`}
+                      className="text-[#607B96]  text-xs my-2 	"
+                    >
+                      {active?.description}
+                    </motion.p>
                   </div>
 
                   <motion.a
@@ -125,7 +125,7 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
+                    className="text-[#607B96]  text-xs md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto  [mask:linear-gradient(to_bottom,white,white,transparent)] [scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
                   >
                     {typeof active.content === "function"
                       ? active.content()
@@ -144,42 +144,33 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
         >
           {title}
         </motion.h3>
-        {/* <h3 className="text-sm text-[#4D5BCE]">{title}</h3> */}
 
         <div className=" bg-[#011221] border border-[#1E2D3D] rounded-lg mt-2">
-          {/* <div className="w-full h-28  rounded-t-md  bg-gray-800"> */}
           <motion.div
             layoutId={`image-${title}-${id}`}
             className=" relative w-full h-32  rounded-t-md  bg-gray-800"
           >
-            <div></div>
+           
 
             <Image
               fill
-              // width={0}
-              // height={0}
+              
               src={imageUrl}
               alt={title}
-              className=" h-full w-full  object-cover object-top rounded-t-md"
+              className=" h-full w-full brightness-25 object-cover object-top rounded-t-md"
             />
           </motion.div>
-          {/* <Image
-              src={imageUrl}
-              alt={title}
-              className=" h-full  object-cover rounded-t-md"
-            /> */}
-          {/* </div> */}
-
           <div className="mt-4 p-4">
+            <article className="text-pretty">
               <motion.p
                 layoutId={`description-${description}-${id}`}
                 className="text-xs text-[#607B96] mb-2"
               >
                 {description}
               </motion.p>
+            </article>
 
-            {/* <p className="text-xs text-[#607B96] mt-2">{description}</p> */}
-            <motion.article
+            <motion.div
               layoutId={`techStacks-${techStacks}-${id}`}
               className="flex gap-1 justify-start my-1 text-[#607B96] overflow-x-auto"
             >
@@ -190,9 +181,9 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
                   key={index}
                 >{`${t},`}</motion.p>
               ))}
-            </motion.article>
+            </motion.div>
             <button
-              className="bg-[#1c2b3a] px-2 py-1 rounded font-normal text-sm text-white mt-2"
+              className="bg-[#1c2b3a] px-2 py-1 rounded font-normal text-xs text-white mt-2"
               onClick={() => setActive(project)}
             >
               view-project
