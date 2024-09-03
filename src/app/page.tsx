@@ -62,7 +62,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="  relative w-full lg:w-1/2 md:flex justify-start items-center mt-8 md:mt-0">
+        <section className="hidden  relative w-full lg:w-1/2 md:flex justify-start items-center mt-8 md:mt-0">
           <div className="relative z-10 w-full h-full">
             {/* <div className="hidden md:block absolute w-[90%] max-w-[479.6px] h-[342.27px] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 custom-background-blur"></div> */}
 

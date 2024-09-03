@@ -76,7 +76,7 @@ export default function RootLayout({
         className={`${fira_code_retina.variable} ${fira_code.variable} border border-gray-700 rounded-md bg-[#011627] 2xl:h-screen`}
       >
         <Providers>
-          <div className=" h-full">
+          <div className=" xl:h-full">
             <Navbar />
             {children}
             <Footer />
