@@ -166,7 +166,7 @@ export default function ProjectsPage() {
                 : selectedStacks.join("; ")}
             </h2>
           </div>
-          <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  2xl:grid-cols-5 3xl:grid-cols-6 gap-x-8 gap-y-4 pr-4 xl:px-8 2xl:gap-x-16 xl:max-w-8xl py-4">
+          <div className=" grid grid-cols-1 md:grid-cols-2  gap-4  px-8  py-4">
             {filteredProjects.map((project) => (
               <ProjectCard
                projects= {projects}

@@ -8,7 +8,7 @@ import Providers from "@/providers/ProgressBarProvider";
 import Navbar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
 import localFont from "next/font/local";
-
+// import { Toaster } from "@/components/ui/toaster";
 // const inter = Inter({ subsets: ["latin"] });
 
 // const fira = Fira({

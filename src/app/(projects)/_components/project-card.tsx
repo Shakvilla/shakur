@@ -76,7 +76,7 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col  bg-[#011221] border border-[#1E2D3D] rounded-lg overflow-hidden"
+              className="w-full max-w-2xl  h-full md:h-fit md:max-h-[90%]  flex flex-col  bg-[#011221] border border-[#1E2D3D] rounded-lg overflow-hidden"
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
                 <Image
@@ -137,18 +137,13 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
           </div>
         ) : null}
       </AnimatePresence>
-      <div className="relative w-full h-full m-2">
-        <motion.h3
-          layoutId={`title-${title}-${id}`}
-          className="text-sm text-[#4D5BCE]"
-        >
-          {title}
-        </motion.h3>
+      <div className="relative w-full h-full ">
+     
 
-        <div className=" bg-[#011221] border border-[#1E2D3D] rounded-xl mt-2">
-          <motion.div
+        <div className=" hover:bg-[#011221] focus:ring-none transition ease-in-out duration-300 hover:-translate-y-1 hover:scale-105 p-4 hover:border hover:border-[#1E2D3D] flex hover:rounded-xl mt-2 gap-x-2">
+        <motion.div
             layoutId={`image-${title}-${id}`}
-            className=" relative w-full h-32  rounded-t-lg  bg-gray-800"
+            className=" relative w-32 h-20    "
           >
            
 
@@ -157,10 +152,26 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
               
               src={imageUrl}
               alt={title}
-              className=" h-full w-full brightness-50 object-cover object-top rounded-t-lg"
+              className=" h-full w-full brightness-50 object-cover object-top rounded-md"
             />
           </motion.div>
-          <div className="mt-4 p-4">
+          <div className="flex flex-col flex-1">
+     
+        
+            <div className=" flex justify-between items-center">
+              <motion.h3
+                layoutId={`title-${title}-${id}`}
+                className="text-sm py-1 text-[#4D5BCE]" >
+                {title}
+              </motion.h3>
+              <button
+                className="bg-[#1c2b3a] px-2 py-1 rounded font-normal text-xs text-white mt-2"
+                onClick={() => setActive(project)}
+              >
+                view-project
+              </button>
+            </div>
+        
             <article className="text-pretty">
               <motion.p
                 layoutId={`description-${description}-${id}`}
@@ -172,22 +183,17 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
 
             <motion.div
               layoutId={`techStacks-${techStacks}-${id}`}
-              className="flex gap-1 justify-start my-1 text-[#607B96] overflow-x-auto"
+              className="flex flex-wrap gap-1 justify-start my-1 text-[#607B96] overflow-x-auto"
             >
               {techStacks.map((t, index) => (
                 <motion.p
                   layoutId={`techStack-${t}`}
-                  className="text-xs "
+                  className="text-xs px-2 py-1 rounded-full  text-xs text-regular-blue bg-regular-blue/10 px-2 py-1 "
                   key={index}
-                >{`${t},`}</motion.p>
+                >{`${t}`}</motion.p>
               ))}
             </motion.div>
-            <button
-              className="bg-[#1c2b3a] px-2 py-1 rounded font-normal text-xs text-white mt-2"
-              onClick={() => setActive(project)}
-            >
-              view-project
-            </button>
+          
           </div>
           {/* <BorderBeam /> */}
         </div>
