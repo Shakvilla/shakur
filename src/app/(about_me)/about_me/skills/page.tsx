@@ -33,7 +33,7 @@ const slugs = [
   return (
     // WIP: Responsiveness to be fixed later
     <div className=" flex flex-col bg-[#011627] text-white relative">
-      <section className="w-full relative h-full">
+      <section className="w-full relative ">
         <div className="px-4 flex justify-start items-center text-[#607B96] border-y border-gray-700">
           <div className="flex  gap-x-2 text-sm pr-2 justify-between items-center xl:w-4/12 border-r border-gray-700 py-2.5">
             <p className="">my-skills</p>
@@ -45,11 +45,11 @@ const slugs = [
           <TypewriterEffectSmoothDemo />
         </div>
 
-        <div className="relative flex  w-full lg:max-w-[32rem] 2xl:max-w-full items-center justify-center overflow-hidden rounded-lg   px-20 pb-20 pt-8 ">
+        <div className="relative flex  w-full lg:max-w-[32rem] 2xl:max-w-[40rem] items-center justify-center overflow-hidden rounded-lg   px-20 pb-20 pt-8 ">
           <IconCloud iconSlugs={slugs} />
         </div>
 
-        <div className="relative mx-auto px-8 xl:max-w-[32rem] 2xl:max-w-5xl ">
+        <div className="relative mx-auto px-8 xl:max-w-[32rem] 2xl:max-w-[40rem] ">
           <SkillsCard />
         </div>
       </section>
