@@ -11,9 +11,9 @@ const projects = [
     title: "Wigal Website //_landing-page",
     ctaText: "_visit",
     ctaLink: "https://wigal.com.gh",
-    description: "The Best Technology Company with In-depth understanding.",
+    description: "The official company website for wigal, showcasing services and brand identity.",
     imageUrl:
-      "https://res.cloudinary.com/dhpa3wn8r/image/upload/v1723751365/Screenshot_2024-08-15_at_4.28.30_PM_ugusy7.png",
+      "https://res.cloudinary.com/dhpa3wn8r/image/upload/v1732573611/wigal-landing-page.png",
     techStacks: ["React", "TailwindCss", "NextJs", "Javascript"],
     content: () => {
       return (
@@ -33,12 +33,12 @@ const projects = [
   },
   {
     id: 1,
-    title: "Wigal Website //_landing-page",
+    title: "Nenser Petroleum //_landing-page",
     ctaText: "_visit",
-    ctaLink: "https://wigal.com.gh",
-    description: "The Best Technology Company with In-depth understanding.",
+    ctaLink: "https://www.nenserpetroleum.com/",
+    description: "Nenser is a leading distributor of quality petroleum products and provider of storage services in Ghana.",
     imageUrl:
-      "https://res.cloudinary.com/dhpa3wn8r/image/upload/v1723751365/Screenshot_2024-08-15_at_4.28.30_PM_ugusy7.png",
+      "https://res.cloudinary.com/dhpa3wn8r/image/upload/v1732574019/nenser-petroleum.png",
     techStacks: ["React", "TailwindCss", "NextJs", "Javascript"],
     content: () => {
       return (
@@ -59,12 +59,12 @@ const projects = [
 
   {
     id: 3,
-    title: "Wigal Website //_landing-page",
+    title: "Naagamni Petroleum //_landing-page",
     ctaText: "_visit",
-    ctaLink: "https://wigal.com.gh",
-    description: "The Best Technology Company with In-depth understanding.",
+    ctaLink: "https://naagamnipetroleum.com/",
+    description: "Naagamni is a dealer in petroleum products i.e. an oil marketing Company (OMC). Its core business is to undertake the distribution, storage, marketing and sale of Petroleum.",
     imageUrl:
-      "https://res.cloudinary.com/dhpa3wn8r/image/upload/v1723751365/Screenshot_2024-08-15_at_4.28.30_PM_ugusy7.png",
+      "https://res.cloudinary.com/dhpa3wn8r/image/upload/v1732574658/naagamnipetroleum.png",
     techStacks: ["React", "TailwindCss", "NextJs", "Javascript"],
     content: () => {
       return (
@@ -87,7 +87,7 @@ const projects = [
     title: "Wigal Website //_landing-page",
     ctaText: "_visit",
     ctaLink: "https://wigal.com.gh",
-    description: "The Best Technology Company with In-depth understanding.",
+    description: "The official company website for wigal, showcasing services and brand identity.",
     imageUrl:
       "https://res.cloudinary.com/dhpa3wn8r/image/upload/v1723751365/Screenshot_2024-08-15_at_4.28.30_PM_ugusy7.png",
     techStacks: ["React", "TailwindCss", "NextJs", "Javascript"],

@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import { IProjectCardProps } from "@/interfaces/project-card";
 import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 const ProjectCard: React.FC<IProjectCardProps> = ({
   
   title,
@@ -94,7 +95,7 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
                   <div className="">
                     <motion.h3
                       layoutId={`title-${active?.title}-${id}`}
-                      className="font-medium text-[#607B96]  text-base"
+                      className="font-medium text-white  text-base"
                     >
                       {active?.title}
                     </motion.h3>
@@ -140,10 +141,12 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
       <div className="relative w-full h-full ">
      
 
-        <div className=" hover:bg-[#011221] focus:ring-none transition ease-in-out duration-300 hover:-translate-y-1 hover:scale-105 p-4 hover:border hover:border-[#1E2D3D] flex hover:rounded-xl mt-2 gap-x-2">
+        <div className=" hover:bg-[#011221]  cursor-pointer focus:ring-none transition ease-in-out duration-300 hover:-translate-y-1 hover:scale-105 p-4 hover:border hover:border-[#1E2D3D] flex hover:rounded-xl mt-2 gap-x-2"                 
+          onClick={() => setActive(project)}
+        >
         <motion.div
             layoutId={`image-${title}-${id}`}
-            className=" relative w-32 h-20    "
+            className=" relative w-36 h-24    "
           >
            
 
@@ -158,17 +161,17 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
           <div className="flex flex-col flex-1">
      
         
-            <div className=" flex justify-between items-center">
+            <div className=" flex justify-between items-start">
               <motion.h3
                 layoutId={`title-${title}-${id}`}
-                className="text-sm py-1 text-[#4D5BCE]" >
+                className="text-sm py-1 text-white" >
                 {title}
               </motion.h3>
               <button
-                className="bg-[#1c2b3a] px-2 py-1 rounded font-normal text-xs text-white mt-2"
+                className="bg-[#1c2b3a] h-8 w-8 flex items-center justify-center rounded-full font-normal text-xs text-white mt-2"
                 onClick={() => setActive(project)}
               >
-                view-project
+                <ArrowUpRight className="h-5 w-5" />
               </button>
             </div>
         
