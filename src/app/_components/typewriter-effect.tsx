@@ -4,6 +4,17 @@ import { cn } from "@/utils/cn";
 import { motion, stagger, useAnimate, useInView } from "framer-motion";
 import { useEffect } from "react";
 
+  /**
+   * TypewriterEffect
+   *
+   * A component that renders a typewriter effect animation for a given array of words.
+   *
+   * @param {Array<{text: string; className?: string}>} words - An array of objects containing the text
+   * and an optional className for each word.
+   * @param {string} [className] - An optional className for the outer div.
+   * @param {string} [cursorClassName] - An optional className for the cursor.
+   * @returns {JSX.Element} - A JSX element containing the typewriter effect animation.
+   */
 export const TypewriterEffect = ({
   words,
   className,

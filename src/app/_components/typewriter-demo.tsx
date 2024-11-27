@@ -2,6 +2,11 @@
 
 import { TypewriterEffect } from "./typewriter-effect";
 
+  /**
+   * A demo component that shows off the TypewriterEffect component with a list of words.
+   *
+   * @returns A JSX element containing the TypewriterEffect component with the words.
+   */
 export function TypewriterEffectSmoothDemo() {
   const words = [
     {
