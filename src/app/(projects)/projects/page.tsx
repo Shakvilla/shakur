@@ -102,6 +102,26 @@ const projects = [
       );
     },
   },
+
+  {
+    id: 4,
+    title: "Zentry Clone //_landing-page",
+    ctaText: "_visit",
+    ctaLink: "https://zentry-clo.vercel.app/",
+    description: "Zentry pioneers the Metagame, a Game of Games ecosystem where worlds converge and communities connect, building the foundation for what will soon become the largest virtual economy—the 'Play Economy'—as the era of gaming culture rises.",
+    imageUrl:
+      "https://res.cloudinary.com/dhpa3wn8r/image/upload/v1732804238/Screenshot_2024-11-28_at_12.44.32_PM_gytbyo.png",
+    techStacks: ["React", "TailwindCss", "NextJs", "Javascript"],
+    content: () => {
+      return (
+        <>
+          <p>
+            This project is a clone of Zentry's website. A hobby project to practice my skills in React, NextJs, and TailwindCss and implement a responsive design. I also learned how to implement stunning animations using GSAP library. 
+          </p>
+        </>
+      );
+    },
+  },
   // {
   //   id: 4,
   //   title: "Wigal Website //_landing-page",
