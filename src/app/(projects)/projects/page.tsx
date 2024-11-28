@@ -82,6 +82,26 @@ const projects = [
       );
     },
   },
+
+  {
+    id: 4,
+    title: "iCollate //_landing-page",
+    ctaText: "_visit",
+    ctaLink: "https://gcmdev.wigal.com.gh/",
+    description: "iCollate app revolutionises the collation process, offering a secure and user-friendly platform for citizens in the democratic process.",
+    imageUrl:
+      "https://res.cloudinary.com/dhpa3wn8r/image/upload/v1732803016/Screenshot_2024-11-28_at_2.09.11_PM_mmllnn.png",
+    techStacks: ["React", "TailwindCss", "NextJs", "Javascript"],
+    content: () => {
+      return (
+        <>
+          <p>
+            My role involved creating a user-friendly interface, developing a responsive frontend, and ensuring the site’s alignment with the company’s branding and goals. 
+          </p>
+        </>
+      );
+    },
+  },
   // {
   //   id: 4,
   //   title: "Wigal Website //_landing-page",
