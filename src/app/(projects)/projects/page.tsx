@@ -82,56 +82,56 @@ const projects = [
       );
     },
   },
-  {
-    id: 4,
-    title: "Wigal Website //_landing-page",
-    ctaText: "_visit",
-    ctaLink: "https://wigal.com.gh",
-    description: "The official company website for wigal, showcasing services and brand identity.",
-    imageUrl:
-      "https://res.cloudinary.com/dhpa3wn8r/image/upload/v1723751365/Screenshot_2024-08-15_at_4.28.30_PM_ugusy7.png",
-    techStacks: ["React", "TailwindCss", "NextJs", "Javascript"],
-    content: () => {
-      return (
-        <>
-          <p>
-            As the Lead UI/UX Designer and Frontend Developer, I led the design
-            and development of the main website for a Ghana-based technology
-            firm. The site effectively markets the company’s SaaS products and
-            software solutions, contributing to a significant revenue increase
-            over the past three years. My role involved creating a user-friendly
-            interface, developing a responsive frontend, and ensuring the site’s
-            alignment with the company’s branding and goals.
-          </p>
-        </>
-      );
-    },
-  },
-   {
-    id: 5,
-    title: "Wigal Website //_landing-page",
-    ctaText: "_visit",
-    ctaLink: "https://wigal.com.gh",
-    description: "The Best Technology Company with In-depth understanding.",
-    imageUrl:
-      "https://res.cloudinary.com/dhpa3wn8r/image/upload/v1723751365/Screenshot_2024-08-15_at_4.28.30_PM_ugusy7.png",
-    techStacks: ["React", "TailwindCss", "NextJs", "Javascript"],
-    content: () => {
-      return (
-        <>
-          <p>
-            As the Lead UI/UX Designer and Frontend Developer, I led the design
-            and development of the main website for a Ghana-based technology
-            firm. The site effectively markets the company’s SaaS products and
-            software solutions, contributing to a significant revenue increase
-            over the past three years. My role involved creating a user-friendly
-            interface, developing a responsive frontend, and ensuring the site’s
-            alignment with the company’s branding and goals.
-          </p>
-        </>
-      );
-    },
-  },
+  // {
+  //   id: 4,
+  //   title: "Wigal Website //_landing-page",
+  //   ctaText: "_visit",
+  //   ctaLink: "https://wigal.com.gh",
+  //   description: "The official company website for wigal, showcasing services and brand identity.",
+  //   imageUrl:
+  //     "https://res.cloudinary.com/dhpa3wn8r/image/upload/v1723751365/Screenshot_2024-08-15_at_4.28.30_PM_ugusy7.png",
+  //   techStacks: ["React", "TailwindCss", "NextJs", "Javascript"],
+  //   content: () => {
+  //     return (
+  //       <>
+  //         <p>
+  //           As the Lead UI/UX Designer and Frontend Developer, I led the design
+  //           and development of the main website for a Ghana-based technology
+  //           firm. The site effectively markets the company’s SaaS products and
+  //           software solutions, contributing to a significant revenue increase
+  //           over the past three years. My role involved creating a user-friendly
+  //           interface, developing a responsive frontend, and ensuring the site’s
+  //           alignment with the company’s branding and goals.
+  //         </p>
+  //       </>
+  //     );
+  //   },
+  // },
+  //  {
+  //   id: 5,
+  //   title: "Wigal Website //_landing-page",
+  //   ctaText: "_visit",
+  //   ctaLink: "https://wigal.com.gh",
+  //   description: "The Best Technology Company with In-depth understanding.",
+  //   imageUrl:
+  //     "https://res.cloudinary.com/dhpa3wn8r/image/upload/v1723751365/Screenshot_2024-08-15_at_4.28.30_PM_ugusy7.png",
+  //   techStacks: ["React", "TailwindCss", "NextJs", "Javascript"],
+  //   content: () => {
+  //     return (
+  //       <>
+  //         <p>
+  //           As the Lead UI/UX Designer and Frontend Developer, I led the design
+  //           and development of the main website for a Ghana-based technology
+  //           firm. The site effectively markets the company’s SaaS products and
+  //           software solutions, contributing to a significant revenue increase
+  //           over the past three years. My role involved creating a user-friendly
+  //           interface, developing a responsive frontend, and ensuring the site’s
+  //           alignment with the company’s branding and goals.
+  //         </p>
+  //       </>
+  //     );
+  //   },
+  // },
   // Add more projects as needed
 ];
 export default function ProjectsPage() {
