@@ -141,12 +141,12 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
       <div className="relative w-full h-full ">
      
 
-        <div className=" hover:bg-[#011221]  cursor-pointer focus:ring-none transition ease-in-out duration-300 hover:-translate-y-1 hover:scale-105 p-4 hover:border hover:border-[#1E2D3D] flex hover:rounded-xl mt-2 gap-x-2"                 
+        <div className=" hover:bg-[#011221]  cursor-pointer focus:ring-none transition ease-in-out duration-300 hover:-translate-y-1 hover:scale-105 p-4 hover:border hover:border-[#1E2D3D] flex flex-col lg:flex-row hover:rounded-xl mt-2 gap-2"                 
           onClick={() => setActive(project)}
         >
         <motion.div
             layoutId={`image-${title}-${id}`}
-            className=" relative w-36 h-24    "
+            className=" relative h-36 lg:w-36 lg:h-24 flex "
           >
            
 
@@ -168,7 +168,7 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
                 {title}
               </motion.h3>
               <button
-                className="bg-[#1c2b3a] h-8 w-8 flex items-center justify-center rounded-full font-normal text-xs text-white mt-2"
+                className="hidden  bg-[#1c2b3a] h-8 w-8 lg:flex items-center justify-center rounded-full font-normal text-xs text-white mt-2"
                 onClick={() => setActive(project)}
               >
                 <ArrowUpRight className="h-5 w-5" />

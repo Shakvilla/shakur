@@ -39,7 +39,7 @@ const Sidebar: React.FC<ISidebarProps> = ({
               <Checkbox
                 checked={selectedStacks.includes(stack)}
                 onCheckedChange={() => toggleStack(stack)}
-                className="mr-2 h-4 w-4 "
+                className="mr-2 h-4 w-4  "
                 id={stack}
 
              
